@@ -3,19 +3,54 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical"
 	android:layout_width="match_parent"
-	android:layout_height="match_parent">
-	<TextView
-		android:text="Small Text"
-		android:textAppearance="?android:attr/textAppearanceSmall"
+	android:layout_height="match_parent"
+	android:minWidth="25px"
+	android:minHeight="25px">
+	<android.support.design.widget.TextInputEditText
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:id="@+id/lisa_arv_1"
+		android:text="Lisa arv 1..." />
+	<android.support.design.widget.TextInputEditText
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/lisa_arv_2"
+		android:text="Lisa arv 2.." />
+	<LinearLayout
+		android:orientation="horizontal"
 		android:minWidth="25px"
 		android:minHeight="25px"
-		android:id="@+id/textView1" />
-	<Button
-		android:text="Button"
+		android:layout_width="match_parent"
+		android:layout_height="80dp"
+		android:id="@+id/tehted_layout" >
+		<Button
+			android:text="LIIDA"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:id="@+id/liida_tehe" />
+		<Button
+			android:text="LAHUTA"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:id="@+id/lahuta_tehe" />
+		<Button
+			android:text="KORRUTA"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:id="@+id/korruta_tehe" />
+		<Button
+			android:text="JAGA"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:id="@+id/jaga_tehe" />
+
+
+		</LinearLayout>
+	<EditText
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/button1" />
+		android:id="@+id/vastus_1" />
+
+
 
 </LinearLayout>
