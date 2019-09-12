@@ -37,6 +37,43 @@ namespace Hello_World
             _jaga_tehe = FindViewById<Button>(Resource.Id.jaga_tehe);
             _vastus_1 = FindViewById<TextView>(Resource.Id.vastus_1);
 
+            _liida_tehe.Click += Liida_Click;
+            _lahuta_tehe.Click += Lahuta_Click;
+            _korruta_tehe.Click += Korruta_Click;
+            _jaga_tehe.Click += Jaga_Click;
+
+            void Liida_Click(object sender, EventArgs e)
+            {
+                double arv1 = Convert.ToDouble(_lisa_arv_1.Text);
+                double arv2 = Convert.ToDouble(_lisa_arv_2.Text);
+                double vastus = arv1 + arv2;
+                _vastus_1.Text = Convert.ToString(vastus);
+            }
+
+            void Lahuta_Click(object sender, EventArgs e)
+            {
+                double arv1 = Convert.ToDouble(_lisa_arv_1.Text);
+                double arv2 = Convert.ToDouble(_lisa_arv_2.Text);
+                double vastus = arv1 - arv2;
+                _vastus_1.Text = Convert.ToString(vastus);
+            }
+
+            void Korruta_Click(object sender, EventArgs e)
+            {
+                double arv1 = Convert.ToDouble(_lisa_arv_1.Text);
+                double arv2 = Convert.ToDouble(_lisa_arv_2.Text);
+                double vastus = arv1 * arv2;
+                _vastus_1.Text = Convert.ToString(vastus);
+            }
+
+            void Jaga_Click(object sender, EventArgs e)
+            {
+                double arv1 = Convert.ToDouble(_lisa_arv_1.Text);
+                double arv2 = Convert.ToDouble(_lisa_arv_2.Text);
+                double vastus = arv1 / arv2;
+                _vastus_1.Text = Convert.ToString(vastus);
+            }
+
             //_button.Click += Button_Click;
 
             //private void Button_Click(object sender, EventArgs e)
