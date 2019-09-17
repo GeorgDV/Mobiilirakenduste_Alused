@@ -62,7 +62,7 @@
 		android:layout_height="wrap_content"
 		android:id="@+id/textView6" />
 	<TextView
-		android:text="@string/red"
+		android:text="@string/violet"
 		android:background="@color/Violet"
 		android:layout_weight="0.7"
 		android:textSize="30dp"
