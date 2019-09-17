@@ -4,4 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+	<LinearLayout
+		android:orientation="vertical"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="400"
+		android:layout_height="wrap_content"
+		android:id="@+id/linearLayout1" >
+		<Button
+		android:text="Challenge 1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/challenge1_button" />
+		<Button
+		android:text="Challenge 2"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/challenge2_button" />
+	    <Button
+		android:text="Challenge 3"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/challenge3_button" />
+	</LinearLayout>
+
+
 </RelativeLayout>
