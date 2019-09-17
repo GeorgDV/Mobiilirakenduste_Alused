@@ -4,6 +4,7 @@ using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
 using System;
+using Android.Content;
 
 namespace Layout_App
 {
@@ -35,24 +36,26 @@ namespace Layout_App
 
             void Challenge1_Click(object sender, EventArgs e)
             {
-                SetContentView(Resource.Layout.challenge1_layout);
+                var intent = new Intent(this, typeof(Challenge1_Activity));
+                this.StartActivity(intent);
             }
 
             void Challenge2_Click(object sender, EventArgs e)
             {
-                SetContentView(Resource.Layout.challenge2_layout);
+                var intent = new Intent(this, typeof(Challenge2_Activity));
+                this.StartActivity(intent);
             }
 
             void Challenge3_Click(object sender, EventArgs e)
             {
-                SetContentView(Resource.Layout.challenge3_layout);
-
+                var intent = new Intent(this, typeof(ChallengeThree_Activity));
+                this.StartActivity(intent);
             }
 
             void Challenge4_Click(object sender, EventArgs e)
             {
-                SetContentView(Resource.Layout.challenge4_layout);
-
+                var intent = new Intent(this, typeof(ChallengeFour_Activity));
+                this.StartActivity(intent);
             }
 
         }
