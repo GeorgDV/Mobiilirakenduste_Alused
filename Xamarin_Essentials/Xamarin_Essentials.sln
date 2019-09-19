@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin_Essentials", "Xamarin_Essentials\Xamarin_Essentials.csproj", "{09CD782D-8369-4222-A33C-7350206ED4BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09CD782D-8369-4222-A33C-7350206ED4BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09CD782D-8369-4222-A33C-7350206ED4BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09CD782D-8369-4222-A33C-7350206ED4BC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{09CD782D-8369-4222-A33C-7350206ED4BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09CD782D-8369-4222-A33C-7350206ED4BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09CD782D-8369-4222-A33C-7350206ED4BC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {259B3C8D-0188-4797-A4EE-BED7A89A903B}
+	EndGlobalSection
+EndGlobal
