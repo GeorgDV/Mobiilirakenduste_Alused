@@ -8,7 +8,7 @@
 	<LinearLayout
 		android:orientation="vertical"
 		android:minWidth="300px"
-		android:minHeight="100px"
+		android:minHeight="500px"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:id="@+id/linearLayout1">
@@ -18,18 +18,79 @@
 			android:layout_height="wrap_content"
 			android:id="@+id/textView1"
 		    android:gravity="top"
-		    android:textSize="30"/>
+		    android:textSize="30dp"
+		    android:textColor="@android:color/holo_blue_bright"/>
 		<TextView
 			android:text=""
 			android:layout_width="200.0dp"
 			android:layout_height="wrap_content"
 			android:id="@+id/batteryLevelTextView"
 		    android:gravity="center"
-		    android:textSize="30"
-		    android:textColor="@android:color/holo_red_light"/>/>
+		    android:textSize="30dp"
+		    android:textColor="@android:color/holo_red_light"/>
 
+		<LinearLayout
+			android:orientation="vertical"
+			android:minWidth="100px"
+			android:minHeight="450px"
+			android:layout_width="200dp"
+			android:layout_height="wrap_content"
+			android:id="@+id/linearLayout2" >
+			<TextView
+			android:text="Device Mode:"
+			android:layout_width="200.0dp"
+			android:layout_height="wrap_content"
+			android:id="@+id/deviceMode_TextView"
+		    android:gravity="top"
+		    android:textSize="16dp"/>
+			<TextView
+			android:text="Manufacturer:"
+			android:layout_width="200.0dp"
+			android:layout_height="wrap_content"
+			android:id="@+id/manufacturer_TextView"
+		    android:gravity="top"
+		    android:textSize="16dp"/>
+			<TextView
+			android:text="Name:"
+			android:layout_width="200.0dp"
+			android:layout_height="wrap_content"
+			android:id="@+id/deviceName_TextView"
+		    android:gravity="top"
+		    android:textSize="16dp"/>'
+			<TextView
+			android:text="Version:"
+			android:layout_width="200.0dp"
+			android:layout_height="wrap_content"
+			android:id="@+id/version_TextView"
+		    android:gravity="top"
+		    android:textSize="16dp"/>
+			<TextView
+			android:text="Platform:"
+			android:layout_width="200.0dp"
+			android:layout_height="wrap_content"
+			android:id="@+id/platform_TextView"
+		    android:gravity="top"
+		    android:textSize="16dp"/>
+			<TextView
+			android:text="Idiom:"
+			android:layout_width="200.0dp"
+			android:layout_height="wrap_content"
+			android:id="@+id/idiom_TextView"
+		    android:gravity="top"
+		    android:textSize="16dp"/>
+			<TextView
+			android:text="Device Type:"
+			android:layout_width="200.0dp"
+			android:layout_height="wrap_content"
+			android:id="@+id/deviceType_TextView"
+		    android:gravity="top"
+		    android:textSize="16dp"/>
+
+		</LinearLayout>
 
     </LinearLayout>
+
+
 
 
 </RelativeLayout>
