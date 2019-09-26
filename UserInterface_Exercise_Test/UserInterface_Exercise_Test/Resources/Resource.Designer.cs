@@ -2591,6 +2591,15 @@ namespace UserInterface_Exercise_Test
 			// aapt resource value: 0x7f0800a0
 			public const int media_actions = 2131230880;
 			
+			// aapt resource value: 0x7f0800b0
+			public const int menu_edit = 2131230896;
+			
+			// aapt resource value: 0x7f0800b1
+			public const int menu_save = 2131230897;
+			
+			// aapt resource value: 0x7f0800b2
+			public const int menu_search = 2131230898;
+			
 			// aapt resource value: 0x7f0800ad
 			public const int message = 2131230893;
 			
@@ -3104,17 +3113,51 @@ namespace UserInterface_Exercise_Test
 			}
 		}
 		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f0e0000
+			public const int top_menu = 2131623936;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
+			{
+			}
+		}
+		
 		public partial class Mipmap
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int ic_launcher = 2130903040;
+			public const int ic_action_content_create = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int ic_launcher_foreground = 2130903041;
+			public const int ic_action_content_save = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int ic_launcher_round = 2130903042;
+			public const int ic_launcher = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int ic_launcher_foreground = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int ic_launcher_round = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int ic_menu_copy_holo_dark = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int ic_menu_cut_holo_dark = 2130903046;
+			
+			// aapt resource value: 0x7f030007
+			public const int ic_menu_paste_holo_dark = 2130903047;
+			
+			// aapt resource value: 0x7f030008
+			public const int ic_menu_search_holo_dark = 2130903048;
 			
 			static Mipmap()
 			{
