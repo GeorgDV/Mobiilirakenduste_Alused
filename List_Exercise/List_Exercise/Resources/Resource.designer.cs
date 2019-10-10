@@ -2588,8 +2588,8 @@ namespace List_Exercise
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800af
-			public const int masked = 2131230895;
+			// aapt resource value: 0x7f0800b2
+			public const int masked = 2131230898;
 			
 			// aapt resource value: 0x7f0800a0
 			public const int media_actions = 2131230880;
@@ -2789,6 +2789,15 @@ namespace List_Exercise
 			// aapt resource value: 0x7f080099
 			public const int text_input_password_toggle = 2131230873;
 			
+			// aapt resource value: 0x7f0800ae
+			public const int text_view1 = 2131230894;
+			
+			// aapt resource value: 0x7f0800af
+			public const int text_view2 = 2131230895;
+			
+			// aapt resource value: 0x7f0800b0
+			public const int text_view3 = 2131230896;
+			
 			// aapt resource value: 0x7f080014
 			public const int textinput_counter = 2131230740;
 			
@@ -2843,8 +2852,8 @@ namespace List_Exercise
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800ae
-			public const int visible = 2131230894;
+			// aapt resource value: 0x7f0800b1
+			public const int visible = 2131230897;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
@@ -3093,6 +3102,9 @@ namespace List_Exercise
 			
 			// aapt resource value: 0x7f04003d
 			public const int tooltip = 2130968637;
+			
+			// aapt resource value: 0x7f04003e
+			public const int Weather_Row = 2130968638;
 			
 			static Layout()
 			{
