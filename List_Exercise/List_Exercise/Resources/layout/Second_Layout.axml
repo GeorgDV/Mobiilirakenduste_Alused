@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<TextView
+		android:text="CarName"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/text_view1"
+		android:textSize="36px"
+		android:textStyle="bold"/>
+	<TextView
+		android:text="CarManufacturer"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/text_view2"
+		android:textSize="28px"
+		android:textStyle="italic"/>
+	<TextView
+		android:text="CarModel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/text_view3"
+		android:textSize="28px"
+		android:textStyle="italic"/>
+	<TextView
+		android:text="CarKW"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/text_view4"
+		android:textSize="28px"
+		android:textStyle="italic"/>
+	<TextView
+		android:text="CarYear"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/text_view5"
+		android:textSize="28px"
+		android:textStyle="italic"/>
+
+</LinearLayout>

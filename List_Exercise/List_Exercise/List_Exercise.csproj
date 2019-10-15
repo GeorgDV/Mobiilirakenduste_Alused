@@ -57,10 +57,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicAdapter.cs" />
+    <Compile Include="BasicAdapterCar.cs" />
+    <Compile Include="Car.cs" />
     <Compile Include="First_Example_Activity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Second_Activity.cs" />
     <Compile Include="WeatherInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -104,6 +107,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Weather_Row.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Second_Layout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

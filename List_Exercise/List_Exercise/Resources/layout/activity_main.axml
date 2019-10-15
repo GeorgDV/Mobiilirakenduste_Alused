@@ -12,5 +12,12 @@
 		android:minWidth="25px"
 		android:minHeight="25px"
 		android:id="@+id/listActivityButton" />
+	<Button
+		android:text="Second ListView Exercise (Car list)"
+		android:layout_width="match_parent"
+		android:layout_height="150px"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/secondActivityButton" />
 
 </LinearLayout>

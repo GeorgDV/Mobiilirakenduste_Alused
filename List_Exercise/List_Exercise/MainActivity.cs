@@ -18,12 +18,22 @@ namespace List_Exercise
             SetContentView(Resource.Layout.activity_main);
 
             var toListActivityButton = FindViewById<Button>(Resource.Id.listActivityButton);
+            var tosecondActivityButton = FindViewById<Button>(Resource.Id.secondActivityButton);
+
             toListActivityButton.Click += ToListActivityButton_Click;
+            tosecondActivityButton.Click += ToSecondActivityButton_Click;
+
         }
 
         private void ToListActivityButton_Click(object sender, EventArgs e)
         {
             var intent = new Intent(this, typeof(First_Example_Activity));
+            this.StartActivity(intent);
+        }
+
+        private void ToSecondActivityButton_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(Second_Activity));
             this.StartActivity(intent);
         }
     }
