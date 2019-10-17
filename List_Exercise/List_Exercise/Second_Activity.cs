@@ -13,15 +13,18 @@ using Android.Widget;
 namespace List_Exercise
 {
     [Activity(Label = "Second_Activity")]
-    public class Second_Activity : ListActivity
+    public class Second_Activity : Activity
     {
+        List<Car> _items;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            var _items = new List<Car>()
+            SetContentView(Resource.Layout.Second_Layout);
+
+            _items = new List<Car>()
             {
-                
                 new Car(){Name = "Audi", Manufacturer = "Germany", Model = "R8", KW= "316 kW", Year= "2006"},
                 new Car(){Name = "BMW", Manufacturer = "Germany", Model = "700", KW= "30 kW", Year= "1956"},
                 new Car(){Name = "Opel", Manufacturer = "Germany", Model = "Speedster", KW= "108 kW", Year= "2001"},
@@ -33,10 +36,10 @@ namespace List_Exercise
                 new Car(){Name = "Maserati", Manufacturer = "Italy", Model = "Levante", KW= "440 kW", Year= "2016"},
             };
 
-            ListAdapter = new BasicAdapterCar(this, _items);
+            var listView = FindViewById<ListView>(Resource.Id.listView1);
+            listView.Adapter = new BasicAdapterCar(this, _items);
+
 
         }
-
-
     }
 }

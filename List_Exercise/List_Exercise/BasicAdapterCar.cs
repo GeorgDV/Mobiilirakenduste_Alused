@@ -45,13 +45,13 @@ namespace List_Exercise
             View view = convertView;
 
             if (view == null)
-                view = _context.LayoutInflater.Inflate(Resource.Layout.Second_Layout, null);
+                view = _context.LayoutInflater.Inflate(Resource.Layout.First_Example_Layout, null);
 
-            view.FindViewById<TextView>(Resource.Id.text_view1).Text = "Car Name: " + item.Name;
-            view.FindViewById<TextView>(Resource.Id.text_view2).Text = "Manufacturer: " + item.Manufacturer;
-            view.FindViewById<TextView>(Resource.Id.text_view3).Text = "Model: " + item.Model;
-            view.FindViewById<TextView>(Resource.Id.text_view4).Text = "KW: " + item.KW;
-            view.FindViewById<TextView>(Resource.Id.text_view5).Text = "First release: " + item.Year;
+            view.FindViewById<TextView>(Resource.Id.text_viewCarName).Text = item.Name;
+            view.FindViewById<TextView>(Resource.Id.text_viewCarManufacturer).Text = item.Manufacturer;
+            view.FindViewById<TextView>(Resource.Id.text_viewCarModel).Text = item.Model;
+            view.FindViewById<TextView>(Resource.Id.text_viewCarKW).Text = item.KW;
+            view.FindViewById<TextView>(Resource.Id.text_viewCarYear).Text = item.Year;
 
             return view;
         }
