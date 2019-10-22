@@ -64,6 +64,7 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Second_Activity.cs" />
+    <Compile Include="Third_Activity.cs" />
     <Compile Include="WeatherInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -98,6 +99,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.2</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +116,17 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Second_Layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\List_Exercise.Core\List_Exercise.Core.csproj">
+      <Project>{9ada388b-564d-46f9-920b-91b2ce5be8a7}</Project>
+      <Name>List_Exercise.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Third_Layout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

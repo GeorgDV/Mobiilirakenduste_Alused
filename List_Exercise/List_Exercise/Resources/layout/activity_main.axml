@@ -19,5 +19,12 @@
 		android:minWidth="25px"
 		android:minHeight="25px"
 		android:id="@+id/secondActivityButton" />
+	<Button
+		android:text="Third Exercise (SWAPI)"
+		android:layout_width="match_parent"
+		android:layout_height="150px"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/thirdActivityButton" />
 
 </LinearLayout>

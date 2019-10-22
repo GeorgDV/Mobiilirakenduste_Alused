@@ -19,9 +19,11 @@ namespace List_Exercise
 
             var toListActivityButton = FindViewById<Button>(Resource.Id.listActivityButton);
             var tosecondActivityButton = FindViewById<Button>(Resource.Id.secondActivityButton);
+            var tothirdActivityButton = FindViewById<Button>(Resource.Id.thirdActivityButton);
 
             toListActivityButton.Click += ToListActivityButton_Click;
             tosecondActivityButton.Click += ToSecondActivityButton_Click;
+            tothirdActivityButton.Click += ToThirdActivityButton_Click;
 
         }
 
@@ -34,6 +36,11 @@ namespace List_Exercise
         private void ToSecondActivityButton_Click(object sender, EventArgs e)
         {
             var intent = new Intent(this, typeof(Second_Activity));
+            this.StartActivity(intent);
+        }
+        private void ToThirdActivityButton_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(Third_Activity));
             this.StartActivity(intent);
         }
     }

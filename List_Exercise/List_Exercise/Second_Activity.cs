@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using List_Exercise.Core;
 
 namespace List_Exercise
 {
@@ -22,6 +23,12 @@ namespace List_Exercise
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.Second_Layout);
+
+            //LIST_EXERCISE.CORE STUFF
+            //var queryString = "https://swapi.co/api/people/?search=darth";
+
+            //var data = DataService.GetDataFromService(queryString);
+            //LIST_EXERCISE.CORE STUFF
 
             _items = new List<Car>()
             {
