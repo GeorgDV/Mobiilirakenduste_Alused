@@ -14,16 +14,16 @@ using List_Exercise.Core;
 namespace List_Exercise
 {
     [Activity(Label = "Third_Activity")]
-    public class Third_Activity : Activity
+    public class Third_Activity : ListActivity
     {
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected async override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            SetContentView(Resource.Layout.Third_Layout);
-
             var queryString = "https://swapi.co/api/people/?search=darth";
-            var data = DataService.GetDataFromService(queryString);
+
+            var data = await DataService.GetStarWarsPeople(queryString);
+            ListAdapter = new BasicAdapterStarWars(this, data.Results);
         }
     }
 }

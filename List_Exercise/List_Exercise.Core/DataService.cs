@@ -9,17 +9,30 @@ namespace List_Exercise.Core
 {
     public class DataService
     {
-        public static async Task<dynamic> GetDataFromService (string queryString)
+        public static async Task<People> GetStarWarsPeople(string queryString)
         {
             HttpClient client = new HttpClient();
             var response = await client.GetStringAsync(queryString);
 
-            dynamic data = null;
+            People data = null;
             if (response != null)
             {
                 data = JsonConvert.DeserializeObject<People>(response);
             }
             return data;
         }
+
+        //public static async Task<dynamic> GetDataFromService (string queryString)
+        //{
+        //    HttpClient client = new HttpClient();
+        //    var response = await client.GetStringAsync(queryString);
+
+        //    dynamic data = null;
+        //    if (response != null)
+        //    {
+        //        data = JsonConvert.DeserializeObject<People>(response);
+        //    }
+        //    return data;
+        //}
     }
 }

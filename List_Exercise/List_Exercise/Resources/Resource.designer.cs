@@ -2591,14 +2591,14 @@ namespace List_Exercise
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800c0
-			public const int masked = 2131230912;
+			// aapt resource value: 0x7f0800c8
+			public const int masked = 2131230920;
 			
 			// aapt resource value: 0x7f0800a7
 			public const int media_actions = 2131230887;
 			
-			// aapt resource value: 0x7f0800bb
-			public const int message = 2131230907;
+			// aapt resource value: 0x7f0800c3
+			public const int message = 2131230915;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -2798,14 +2798,14 @@ namespace List_Exercise
 			// aapt resource value: 0x7f08009b
 			public const int text_input_password_toggle = 2131230875;
 			
-			// aapt resource value: 0x7f0800bc
-			public const int text_view1 = 2131230908;
+			// aapt resource value: 0x7f0800c4
+			public const int text_view1 = 2131230916;
 			
-			// aapt resource value: 0x7f0800bd
-			public const int text_view2 = 2131230909;
+			// aapt resource value: 0x7f0800c5
+			public const int text_view2 = 2131230917;
 			
-			// aapt resource value: 0x7f0800be
-			public const int text_view3 = 2131230910;
+			// aapt resource value: 0x7f0800c6
+			public const int text_view3 = 2131230918;
 			
 			// aapt resource value: 0x7f08009f
 			public const int text_viewCarKW = 2131230879;
@@ -2833,6 +2833,30 @@ namespace List_Exercise
 			
 			// aapt resource value: 0x7f0800b5
 			public const int text_viewName = 2131230901;
+			
+			// aapt resource value: 0x7f0800bb
+			public const int text_viewSWAPI1 = 2131230907;
+			
+			// aapt resource value: 0x7f0800bc
+			public const int text_viewSWAPI2 = 2131230908;
+			
+			// aapt resource value: 0x7f0800bd
+			public const int text_viewSWAPI3 = 2131230909;
+			
+			// aapt resource value: 0x7f0800be
+			public const int text_viewSWAPI4 = 2131230910;
+			
+			// aapt resource value: 0x7f0800bf
+			public const int text_viewSWAPI5 = 2131230911;
+			
+			// aapt resource value: 0x7f0800c0
+			public const int text_viewSWAPI6 = 2131230912;
+			
+			// aapt resource value: 0x7f0800c1
+			public const int text_viewSWAPI7 = 2131230913;
+			
+			// aapt resource value: 0x7f0800c2
+			public const int text_viewSWAPI8 = 2131230914;
 			
 			// aapt resource value: 0x7f0800b9
 			public const int text_viewYear = 2131230905;
@@ -2894,8 +2918,8 @@ namespace List_Exercise
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800bf
-			public const int visible = 2131230911;
+			// aapt resource value: 0x7f0800c7
+			public const int visible = 2131230919;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
