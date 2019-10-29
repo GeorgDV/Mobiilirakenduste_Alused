@@ -44,12 +44,12 @@ namespace List_Exercise
 
             view.FindViewById<TextView>(Resource.Id.text_viewSWAPI1).Text = "Name: " + item.Name;
             view.FindViewById<TextView>(Resource.Id.text_viewSWAPI2).Text = "Gender: " + item.Gender;
-            view.FindViewById<TextView>(Resource.Id.text_viewSWAPI3).Text = "Eye Color: " + item.EyeColor;
-            view.FindViewById<TextView>(Resource.Id.text_viewSWAPI4).Text = "Skin Color: " + item.SkinColor;
-            view.FindViewById<TextView>(Resource.Id.text_viewSWAPI5).Text = "Hair Color: " + item.HairColor;
+            view.FindViewById<TextView>(Resource.Id.text_viewSWAPI3).Text = "Eye Color: " + item.Eye_Color;
+            view.FindViewById<TextView>(Resource.Id.text_viewSWAPI4).Text = "Skin Color: " + item.Skin_Color;
+            view.FindViewById<TextView>(Resource.Id.text_viewSWAPI5).Text = "Hair Color: " + item.Hair_Color;
             view.FindViewById<TextView>(Resource.Id.text_viewSWAPI6).Text = "Mass: " + item.Mass.ToString();
             view.FindViewById<TextView>(Resource.Id.text_viewSWAPI7).Text = "Height: " + item.Height.ToString();
-            view.FindViewById<TextView>(Resource.Id.text_viewSWAPI8).Text = "Birth Year: " + item.BirthYear;
+            view.FindViewById<TextView>(Resource.Id.text_viewSWAPI8).Text = "Birth Year: " + item.Birth_Year;
             return view;
         }
     }
