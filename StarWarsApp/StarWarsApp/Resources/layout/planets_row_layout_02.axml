@@ -3,13 +3,14 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
 	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:minWidth="25px"
 		android:minHeight="25px"
-		android:id="@+id/textView1"
+		android:id="@+id/textViewPlanets1"
 		android:background="@color/NiceLightBlue"
 		android:textStyle="bold"
 		android:textSize="38px" />
@@ -19,7 +20,7 @@
 		android:layout_height="wrap_content"
 		android:minWidth="25px"
 		android:minHeight="25px"
-		android:id="@+id/textView2"
+		android:id="@+id/textViewPlanets2"
 		android:background="@color/NiceLightBlue"
 	    android:textStyle="bold"/>
 	<TextView
@@ -28,16 +29,16 @@
 		android:layout_height="wrap_content"
 		android:minWidth="25px"
 		android:minHeight="25px"
-		android:id="@+id/textView3"
+		android:id="@+id/textViewPlanets3"
 		android:background="@color/NiceLightBlue"
 	    android:textStyle="bold"/>
-		<TextView
+	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:minWidth="25px"
 		android:minHeight="25px"
-		android:id="@+id/textView4"
+		android:id="@+id/textViewPlanets4"
 		android:background="@color/NiceLightBlue"
 		android:textStyle="bold"/>
 	<TextView
@@ -46,7 +47,7 @@
 		android:layout_height="wrap_content"
 		android:minWidth="25px"
 		android:minHeight="25px"
-		android:id="@+id/textView5"
+		android:id="@+id/textViewPlanets5"
 		android:background="@color/NiceLightBlue"
 	    android:textStyle="bold"/>
 	<TextView
@@ -55,16 +56,16 @@
 		android:layout_height="wrap_content"
 		android:minWidth="25px"
 		android:minHeight="25px"
-		android:id="@+id/textView6"
+		android:id="@+id/textViewPlanets6"
 		android:background="@color/NiceLightBlue"
 	    android:textStyle="bold"/>
-		<TextView
+	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:minWidth="25px"
 		android:minHeight="25px"
-		android:id="@+id/textView7"
+		android:id="@+id/textViewPlanets7"
 		android:background="@color/NiceLightBlue"
 		android:textStyle="bold"/>
 	<TextView
@@ -73,9 +74,17 @@
 		android:layout_height="wrap_content"
 		android:minWidth="25px"
 		android:minHeight="25px"
-		android:id="@+id/textView8"
+		android:id="@+id/textViewPlanets8"
 		android:background="@color/NiceLightBlue"
 	    android:textStyle="bold"/>
-
+	<TextView
+		android:text="Text"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/textViewPlanets9"
+		android:background="@color/NiceLightBlue"
+	    android:textStyle="bold"/>
 
 </LinearLayout>

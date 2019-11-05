@@ -51,6 +51,11 @@ namespace StarWarsApp
             view.FindViewById<TextView>(Resource.Id.textView1).Text = "Name: " + item.Name;
             view.FindViewById<TextView>(Resource.Id.textView2).Text = "Gender: " + item.Gender;
             view.FindViewById<TextView>(Resource.Id.textView3).Text = "Birth Year: " + item.Birth_Year;
+            view.FindViewById<TextView>(Resource.Id.textView4).Text = "Eye Color: " + item.Eye_Color;
+            view.FindViewById<TextView>(Resource.Id.textView5).Text = "Skin Color: " + item.Skin_Color;
+            view.FindViewById<TextView>(Resource.Id.textView6).Text = "Hair Color: " + item.Hair_Color;
+            view.FindViewById<TextView>(Resource.Id.textView7).Text = "Mass: " + item.Mass.ToString();
+            view.FindViewById<TextView>(Resource.Id.textView8).Text = "Height: " + item.Height.ToString();
             return view;
         }
     }
