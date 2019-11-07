@@ -17,8 +17,9 @@ namespace StarWarsApp.Core
             if (response != null)
             {
                 data = JsonConvert.DeserializeObject<Planets>(response);
+                return data;
             }
-            return data;
+            return null;
         }
     }
 }

@@ -24,7 +24,7 @@ namespace StarWarsApp
 
             toPeopleBtn.Click += ToPeopleBtn_Click;
             toPlanetsBtn.Click += ToPlanetsBtn_Click;
-            //toStarshipsBtn.Click += ToStarshipsBtn_Click;
+            toStarshipsBtn.Click += ToStarshipsBtn_Click;
 
         }
 
@@ -39,10 +39,10 @@ namespace StarWarsApp
             var intent = new Intent(this, typeof(Planets_Activity));
             this.StartActivity(intent);
         }
-        //private void ToStarshipsBtn_Click(object sender, EventArgs e)
-        //{
-        //    var intent = new Intent(this, typeof(Third_Activity));
-        //    this.StartActivity(intent);
-        //}
+        private void ToStarshipsBtn_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(Starships_Activity));
+            this.StartActivity(intent);
+        }
     }
 }

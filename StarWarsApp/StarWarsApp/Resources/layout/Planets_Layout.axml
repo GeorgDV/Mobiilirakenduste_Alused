@@ -6,6 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 	android:background="@color/LightestOfAllBlue">
+	<TextView
+		android:text="Search Star Wars Planets.."
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/textViewSWAPI2"
+		android:background="@color/LightestOfAllBlue"
+		android:textStyle="bold"
+		android:textSize="42px" />
 	<EditText
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
@@ -16,7 +26,8 @@
 		android:text="Search"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/searchButtonPlanets" />
+		android:id="@+id/searchButtonPlanets"
+	    android:background="@color/NiceLightBlue"/>
 	<ListView
 		android:minWidth="25px"
 		android:minHeight="25px"

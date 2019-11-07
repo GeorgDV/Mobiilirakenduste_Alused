@@ -2248,26 +2248,26 @@ namespace StarWarsApp
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f02006a
-			public const int avd_hide_password_1 = 2130837610;
-			
 			// aapt resource value: 0x7f02006b
-			public const int avd_hide_password_2 = 2130837611;
+			public const int avd_hide_password_1 = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int avd_hide_password_3 = 2130837612;
+			public const int avd_hide_password_2 = 2130837612;
+			
+			// aapt resource value: 0x7f02006d
+			public const int avd_hide_password_3 = 2130837613;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f02006d
-			public const int avd_show_password_1 = 2130837613;
-			
 			// aapt resource value: 0x7f02006e
-			public const int avd_show_password_2 = 2130837614;
+			public const int avd_show_password_1 = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int avd_show_password_3 = 2130837615;
+			public const int avd_show_password_2 = 2130837615;
+			
+			// aapt resource value: 0x7f020070
+			public const int avd_show_password_3 = 2130837616;
 			
 			// aapt resource value: 0x7f020055
 			public const int design_bottom_navigation_item_background = 2130837589;
@@ -2288,49 +2288,52 @@ namespace StarWarsApp
 			public const int design_snackbar_background = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int navigation_empty_icon = 2130837595;
+			public const int Luke_skywalker = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int notification_action_background = 2130837596;
+			public const int navigation_empty_icon = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int notification_bg = 2130837597;
+			public const int notification_action_background = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int notification_bg_low = 2130837598;
+			public const int notification_bg = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int notification_bg_low_normal = 2130837599;
+			public const int notification_bg_low = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int notification_bg_low_pressed = 2130837600;
+			public const int notification_bg_low_normal = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int notification_bg_normal = 2130837601;
+			public const int notification_bg_low_pressed = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int notification_bg_normal_pressed = 2130837602;
+			public const int notification_bg_normal = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int notification_icon_background = 2130837603;
-			
-			// aapt resource value: 0x7f020068
-			public const int notification_template_icon_bg = 2130837608;
-			
-			// aapt resource value: 0x7f020069
-			public const int notification_template_icon_low_bg = 2130837609;
+			public const int notification_bg_normal_pressed = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int notification_tile_bg = 2130837604;
+			public const int notification_icon_background = 2130837604;
+			
+			// aapt resource value: 0x7f020069
+			public const int notification_template_icon_bg = 2130837609;
+			
+			// aapt resource value: 0x7f02006a
+			public const int notification_template_icon_low_bg = 2130837610;
 			
 			// aapt resource value: 0x7f020065
-			public const int notify_panel_notification_icon_bg = 2130837605;
+			public const int notification_tile_bg = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int tooltip_frame_dark = 2130837606;
+			public const int notify_panel_notification_icon_bg = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int tooltip_frame_light = 2130837607;
+			public const int tooltip_frame_dark = 2130837607;
+			
+			// aapt resource value: 0x7f020068
+			public const int tooltip_frame_light = 2130837608;
 			
 			static Drawable()
 			{
@@ -2606,14 +2609,14 @@ namespace StarWarsApp
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800c8
-			public const int masked = 2131230920;
+			// aapt resource value: 0x7f0800db
+			public const int masked = 2131230939;
 			
 			// aapt resource value: 0x7f0800a2
 			public const int media_actions = 2131230882;
 			
-			// aapt resource value: 0x7f0800c6
-			public const int message = 2131230918;
+			// aapt resource value: 0x7f0800d9
+			public const int message = 2131230937;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -2654,14 +2657,14 @@ namespace StarWarsApp
 			// aapt resource value: 0x7f08000b
 			public const int parent_matrix = 2131230731;
 			
-			// aapt resource value: 0x7f0800b1
-			public const int peopleListView = 2131230897;
+			// aapt resource value: 0x7f0800b2
+			public const int peopleListView = 2131230898;
 			
 			// aapt resource value: 0x7f08004d
 			public const int pin = 2131230797;
 			
-			// aapt resource value: 0x7f0800bc
-			public const int planetsListView = 2131230908;
+			// aapt resource value: 0x7f0800be
+			public const int planetsListView = 2131230910;
 			
 			// aapt resource value: 0x7f080006
 			public const int progress_circular = 2131230726;
@@ -2708,17 +2711,23 @@ namespace StarWarsApp
 			// aapt resource value: 0x7f080055
 			public const int scrollable = 2131230805;
 			
+			// aapt resource value: 0x7f0800b1
+			public const int searchButton = 2131230897;
+			
+			// aapt resource value: 0x7f0800bd
+			public const int searchButtonPlanets = 2131230909;
+			
+			// aapt resource value: 0x7f0800ca
+			public const int searchButtonStarships = 2131230922;
+			
 			// aapt resource value: 0x7f0800b0
-			public const int searchButton = 2131230896;
+			public const int searchEditText = 2131230896;
 			
-			// aapt resource value: 0x7f0800bb
-			public const int searchButtonPlanets = 2131230907;
+			// aapt resource value: 0x7f0800bc
+			public const int searchEditTextPlanets = 2131230908;
 			
-			// aapt resource value: 0x7f0800af
-			public const int searchEditText = 2131230895;
-			
-			// aapt resource value: 0x7f0800ba
-			public const int searchEditTextPlanets = 2131230906;
+			// aapt resource value: 0x7f0800c9
+			public const int searchEditTextStarships = 2131230921;
 			
 			// aapt resource value: 0x7f080080
 			public const int search_badge = 2131230848;
@@ -2792,6 +2801,9 @@ namespace StarWarsApp
 			// aapt resource value: 0x7f08002c
 			public const int src_over = 2131230764;
 			
+			// aapt resource value: 0x7f0800cb
+			public const int starshipsListView = 2131230923;
+			
 			// aapt resource value: 0x7f08004b
 			public const int start = 2131230795;
 			
@@ -2822,56 +2834,104 @@ namespace StarWarsApp
 			// aapt resource value: 0x7f080069
 			public const int textSpacerNoTitle = 2131230825;
 			
-			// aapt resource value: 0x7f0800b2
-			public const int textView1 = 2131230898;
-			
 			// aapt resource value: 0x7f0800b3
-			public const int textView2 = 2131230899;
+			public const int textView1 = 2131230899;
 			
 			// aapt resource value: 0x7f0800b4
-			public const int textView3 = 2131230900;
+			public const int textView2 = 2131230900;
 			
 			// aapt resource value: 0x7f0800b5
-			public const int textView4 = 2131230901;
+			public const int textView3 = 2131230901;
 			
 			// aapt resource value: 0x7f0800b6
-			public const int textView5 = 2131230902;
+			public const int textView4 = 2131230902;
 			
 			// aapt resource value: 0x7f0800b7
-			public const int textView6 = 2131230903;
+			public const int textView5 = 2131230903;
 			
 			// aapt resource value: 0x7f0800b8
-			public const int textView7 = 2131230904;
+			public const int textView6 = 2131230904;
 			
 			// aapt resource value: 0x7f0800b9
-			public const int textView8 = 2131230905;
+			public const int textView7 = 2131230905;
 			
-			// aapt resource value: 0x7f0800bd
-			public const int textViewPlanets1 = 2131230909;
-			
-			// aapt resource value: 0x7f0800be
-			public const int textViewPlanets2 = 2131230910;
+			// aapt resource value: 0x7f0800ba
+			public const int textView8 = 2131230906;
 			
 			// aapt resource value: 0x7f0800bf
-			public const int textViewPlanets3 = 2131230911;
+			public const int textViewPlanets1 = 2131230911;
 			
 			// aapt resource value: 0x7f0800c0
-			public const int textViewPlanets4 = 2131230912;
+			public const int textViewPlanets2 = 2131230912;
 			
 			// aapt resource value: 0x7f0800c1
-			public const int textViewPlanets5 = 2131230913;
+			public const int textViewPlanets3 = 2131230913;
 			
 			// aapt resource value: 0x7f0800c2
-			public const int textViewPlanets6 = 2131230914;
+			public const int textViewPlanets4 = 2131230914;
 			
 			// aapt resource value: 0x7f0800c3
-			public const int textViewPlanets7 = 2131230915;
+			public const int textViewPlanets5 = 2131230915;
 			
 			// aapt resource value: 0x7f0800c4
-			public const int textViewPlanets8 = 2131230916;
+			public const int textViewPlanets6 = 2131230916;
 			
 			// aapt resource value: 0x7f0800c5
-			public const int textViewPlanets9 = 2131230917;
+			public const int textViewPlanets7 = 2131230917;
+			
+			// aapt resource value: 0x7f0800c6
+			public const int textViewPlanets8 = 2131230918;
+			
+			// aapt resource value: 0x7f0800c7
+			public const int textViewPlanets9 = 2131230919;
+			
+			// aapt resource value: 0x7f0800c8
+			public const int textViewSWAPI03 = 2131230920;
+			
+			// aapt resource value: 0x7f0800af
+			public const int textViewSWAPI1 = 2131230895;
+			
+			// aapt resource value: 0x7f0800bb
+			public const int textViewSWAPI2 = 2131230907;
+			
+			// aapt resource value: 0x7f0800cc
+			public const int textViewStarships1 = 2131230924;
+			
+			// aapt resource value: 0x7f0800d5
+			public const int textViewStarships10 = 2131230933;
+			
+			// aapt resource value: 0x7f0800d6
+			public const int textViewStarships11 = 2131230934;
+			
+			// aapt resource value: 0x7f0800d7
+			public const int textViewStarships12 = 2131230935;
+			
+			// aapt resource value: 0x7f0800d8
+			public const int textViewStarships13 = 2131230936;
+			
+			// aapt resource value: 0x7f0800cd
+			public const int textViewStarships2 = 2131230925;
+			
+			// aapt resource value: 0x7f0800ce
+			public const int textViewStarships3 = 2131230926;
+			
+			// aapt resource value: 0x7f0800cf
+			public const int textViewStarships4 = 2131230927;
+			
+			// aapt resource value: 0x7f0800d0
+			public const int textViewStarships5 = 2131230928;
+			
+			// aapt resource value: 0x7f0800d1
+			public const int textViewStarships6 = 2131230929;
+			
+			// aapt resource value: 0x7f0800d2
+			public const int textViewStarships7 = 2131230930;
+			
+			// aapt resource value: 0x7f0800d3
+			public const int textViewStarships8 = 2131230931;
+			
+			// aapt resource value: 0x7f0800d4
+			public const int textViewStarships9 = 2131230932;
 			
 			// aapt resource value: 0x7f08009b
 			public const int text_input_password_toggle = 2131230875;
@@ -2939,8 +2999,8 @@ namespace StarWarsApp
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800c7
-			public const int visible = 2131230919;
+			// aapt resource value: 0x7f0800da
+			public const int visible = 2131230938;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
@@ -3194,10 +3254,16 @@ namespace StarWarsApp
 			public const int select_dialog_singlechoice_material = 2130968638;
 			
 			// aapt resource value: 0x7f04003f
-			public const int support_simple_spinner_dropdown_item = 2130968639;
+			public const int Starships_Layout = 2130968639;
 			
 			// aapt resource value: 0x7f040040
-			public const int tooltip = 2130968640;
+			public const int starships_row_layout = 2130968640;
+			
+			// aapt resource value: 0x7f040041
+			public const int support_simple_spinner_dropdown_item = 2130968641;
+			
+			// aapt resource value: 0x7f040042
+			public const int tooltip = 2130968642;
 			
 			static Layout()
 			{

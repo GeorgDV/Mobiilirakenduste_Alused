@@ -7,12 +7,12 @@
     android:layout_height="match_parent"
 	android:background="@color/LightestOfAllBlue">
 	<TextView
-		android:text="Search Star Wars People.."
+		android:text="Search Star Wars Starships.."
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:minWidth="25px"
 		android:minHeight="25px"
-		android:id="@+id/textViewSWAPI1"
+		android:id="@+id/textViewSWAPI03"
 		android:background="@color/LightestOfAllBlue"
 		android:textStyle="bold"
 		android:textSize="42px" />
@@ -21,12 +21,12 @@
 		android:layout_height="wrap_content"
 		android:minWidth="25px"
 		android:minHeight="25px"
-		android:id="@+id/searchEditText" />
+		android:id="@+id/searchEditTextStarships" />
 	<Button
 		android:text="Search"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/searchButton"
+		android:id="@+id/searchButtonStarships"
 		android:background="@color/NiceLightBlue"/>
 	<ListView
 		android:minWidth="25px"
@@ -34,5 +34,5 @@
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:background="@color/VeryLightBlue"
-		android:id="@+id/peopleListView" />
+		android:id="@+id/starshipsListView" />
 </LinearLayout>
