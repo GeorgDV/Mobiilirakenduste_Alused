@@ -7,19 +7,24 @@
     android:layout_height="match_parent"
 	android:background="@color/LightestOfAllBlue">
 	<Button
-		android:text="People"
+		android:text="People Search"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:id="@+id/toPeopleButton" />
 	<Button
-		android:text="Planets"
+		android:text="Planets Search"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:id="@+id/toPlanetsButton" />
 	<Button
-		android:text="Starships"
+		android:text="Starships Search"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:id="@+id/toStarshipsButton" />
+	<Button
+		android:text="Movies List"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/toMoviesListButton" />
 
 </LinearLayout>
