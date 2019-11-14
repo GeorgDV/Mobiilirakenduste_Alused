@@ -5,26 +5,43 @@
 	android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-	android:background="@color/LightestOfAllBlue">
-	<Button
-		android:text="People Search"
+	android:background="@color/EvenNicerLightBlue">
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/toPeopleButton" />
+		android:id="@+id/mainImageWrapper"
+		android:gravity="center"
+		android:background="@color/LighterDarkBlue">
+	<ImageView
+		android:layout_width="700px"
+		android:layout_height="500px"
+		android:id="@+id/mainImageView"
+	    android:src="@drawable/luke_skywalker"/>
+	</LinearLayout>
 	<Button
-		android:text="Planets Search"
+		android:text="Star Wars People Search"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/toPlanetsButton" />
+		android:id="@+id/toPeopleButton" 
+	    android:backgroundTint="@color/EvenNicerLightBlue02"/>
 	<Button
-		android:text="Starships Search"
+		android:text="Star Wars Planets Search"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/toStarshipsButton" />
+		android:id="@+id/toPlanetsButton" 
+	    android:backgroundTint="@color/EvenNicerLightBlue02"/>
 	<Button
-		android:text="Movies List"
+		android:text="Star Wars Starships Search"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/toMoviesListButton" />
+		android:id="@+id/toStarshipsButton" 
+	    android:backgroundTint="@color/EvenNicerLightBlue02"/>
+	<Button
+		android:text="Star Wars Movies List"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/toMoviesListButton" 
+	    android:backgroundTint="@color/EvenNicerLightBlue02"/>
 
 </LinearLayout>

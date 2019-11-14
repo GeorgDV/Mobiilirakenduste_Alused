@@ -18,6 +18,8 @@ namespace StarWarsApp
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
+            //var imageView = FindViewById<ImageView>(Resource.Id.mainImageView);
+            //var drawable = (int)typeof(Resource.Drawable).GetField("Luke_skywalker.jpg").GetValue(null);
             var toPeopleBtn = FindViewById<Button>(Resource.Id.toPeopleButton);
             var toPlanetsBtn = FindViewById<Button>(Resource.Id.toPlanetsButton);
             var toStarshipsBtn = FindViewById<Button>(Resource.Id.toStarshipsButton);

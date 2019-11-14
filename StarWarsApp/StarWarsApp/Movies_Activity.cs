@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using StarWarsApp.Core;
+using static Android.Widget.AdapterView;
 
 namespace StarWarsApp
 {
@@ -26,6 +27,12 @@ namespace StarWarsApp
             string queryString = "https://swapi.co/api/films/";
             var data = await DataServiceMovies.GetStarWarsMovies(queryString);
             moviesListView.Adapter = new StarWarsMoviesAdapter(this, data.Results);
+
+            //moviesListView.ItemClick += (object sender, ItemClickEventArgs e) =>
+            //{
+            //    var a = Convert.ToString(moviesListView.GetItemAtPosition(e.Position)); // Show text
+            //    var bText = Convert.ToString(e.Position); // Show index
+            //};
         }
     }
 }
