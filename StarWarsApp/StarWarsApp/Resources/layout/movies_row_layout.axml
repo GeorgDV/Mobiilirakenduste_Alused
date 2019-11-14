@@ -2,22 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+	android:background="@color/SlightlyLightBlue">
 
-	<TextView
-			android:text=""
-			android:layout_width="match_parent"
-			android:layout_height="20px"
-			android:minWidth="25px"
-			android:minHeight="25px"
-			android:id="@+id/textViewMovies1"
-			android:background="@color/SlightlyLightBlue"
-			android:textStyle="bold"/>
 	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 		android:orientation="vertical"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/movieListElement">
+		android:id="@+id/movieListElement"
+		android:padding="15px">
 
 		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 			android:orientation="horizontal"
@@ -35,8 +28,9 @@
 				android:id="@+id/textViewMoviesTitle"
 				android:background="@color/NiceLightBlue"
 				android:textStyle="bold"
-				android:textSize="38px" 
-				android:layout_weight="0.35"/>
+				android:textSize="34px" 
+				android:layout_weight="0.35"
+			    android:padding="5px"/>
 
 			<TextView
 				android:text="Year: 1999"
@@ -47,8 +41,9 @@
 				android:id="@+id/textViewMoviesYear"
 				android:background="@color/NiceLightBlue"
 				android:textStyle="bold"
-				android:textSize="38px" 
-				android:layout_weight="1"/>
+				android:textSize="34px" 
+				android:layout_weight="1"
+			    android:padding="5px"/>
 
 		</LinearLayout>
 
@@ -61,8 +56,10 @@
 			android:id="@+id/textViewMoviesDirector"
 			android:background="@color/NiceLightBlue"
 			android:textStyle="bold"
-			android:textSize="38px" 
-			android:layout_weight="1"/>
+			android:textSize="32px" 
+			android:layout_weight="1"
+		    android:paddingLeft="5px"
+	        android:paddingRight="5px"/>
 		<TextView
 			android:text="Producer: DX"
 			android:layout_width="match_parent"
@@ -72,8 +69,10 @@
 			android:id="@+id/textViewMoviesProducer"
 			android:background="@color/NiceLightBlue"
 			android:textStyle="bold"
-			android:textSize="38px" 
-			android:layout_weight="1"/>
+			android:textSize="32px" 
+			android:layout_weight="1"
+		    android:paddingLeft="5px"
+	        android:paddingRight="5px"/>
 
 		<TextView
 			android:text="Description: Lorem ipsum..."
@@ -84,18 +83,8 @@
 			android:id="@+id/textViewMoviesDesc"
 			android:background="@color/EvenNicerLightBlue"
 			android:textStyle="bold"
-			android:textSize="34px" 
+			android:textSize="30px" 
 		    android:gravity="center"/>
 
 	</LinearLayout>
-	<TextView
-		android:text=""
-		android:layout_width="match_parent"
-		android:layout_height="10px"
-		android:minWidth="25px"
-		android:minHeight="25px"
-		android:id="@+id/textViewMovies2"
-		android:background="@color/SlightlyLightBlue"
-		android:textStyle="bold"/>
-
 </LinearLayout>

@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+	android:padding="10px">
 	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
@@ -12,7 +13,8 @@
 		android:id="@+id/textViewStarships1"
 		android:background="@color/NiceLightBlue"
 		android:textStyle="bold"
-		android:textSize="38px" />
+		android:textSize="38px" 
+	    android:padding="5px"/>
 	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
@@ -21,7 +23,9 @@
 		android:minHeight="25px"
 		android:id="@+id/textViewStarships2"
 		android:background="@color/NiceLightBlue"
-	    android:textStyle="bold"/>
+	    android:textStyle="bold"
+	    android:paddingLeft="5px"
+	    android:paddingRight="5px"/>
 	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
@@ -30,7 +34,9 @@
 		android:minHeight="25px"
 		android:id="@+id/textViewStarships3"
 		android:background="@color/NiceLightBlue"
-	    android:textStyle="bold"/>
+	    android:textStyle="bold"
+	    android:paddingLeft="5px"
+	    android:paddingRight="5px"/>
 	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
@@ -39,7 +45,9 @@
 		android:minHeight="25px"
 		android:id="@+id/textViewStarships4"
 		android:background="@color/NiceLightBlue"
-		android:textStyle="bold"/>
+		android:textStyle="bold"
+	    android:paddingLeft="5px"
+	    android:paddingRight="5px"/>
 	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
@@ -48,7 +56,9 @@
 		android:minHeight="25px"
 		android:id="@+id/textViewStarships5"
 		android:background="@color/NiceLightBlue"
-	    android:textStyle="bold"/>
+	    android:textStyle="bold"
+	    android:paddingLeft="5px"
+	    android:paddingRight="5px"/>
 	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
@@ -57,7 +67,9 @@
 		android:minHeight="25px"
 		android:id="@+id/textViewStarships6"
 		android:background="@color/NiceLightBlue"
-	    android:textStyle="bold"/>
+	    android:textStyle="bold"
+	    android:paddingLeft="5px"
+	    android:paddingRight="5px"/>
 	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
@@ -66,7 +78,9 @@
 		android:minHeight="25px"
 		android:id="@+id/textViewStarships7"
 		android:background="@color/NiceLightBlue"
-		android:textStyle="bold"/>
+		android:textStyle="bold"
+	    android:paddingLeft="5px"
+	    android:paddingRight="5px"/>
 	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
@@ -75,7 +89,9 @@
 		android:minHeight="25px"
 		android:id="@+id/textViewStarships8"
 		android:background="@color/NiceLightBlue"
-	    android:textStyle="bold"/>
+	    android:textStyle="bold"
+	    android:paddingLeft="5px"
+	    android:paddingRight="5px"/>
 	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
@@ -84,7 +100,9 @@
 		android:minHeight="25px"
 		android:id="@+id/textViewStarships9"
 		android:background="@color/NiceLightBlue"
-	    android:textStyle="bold"/>
+	    android:textStyle="bold"
+	    android:paddingLeft="5px"
+	    android:paddingRight="5px"/>
 		<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
@@ -93,7 +111,9 @@
 		android:minHeight="25px"
 		android:id="@+id/textViewStarships10"
 		android:background="@color/NiceLightBlue"
-	    android:textStyle="bold"/>
+	    android:textStyle="bold"
+	    android:paddingLeft="5px"
+	    android:paddingRight="5px"/>
 	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
@@ -102,7 +122,9 @@
 		android:minHeight="25px"
 		android:id="@+id/textViewStarships11"
 		android:background="@color/NiceLightBlue"
-		android:textStyle="bold"/>
+		android:textStyle="bold"
+	    android:paddingLeft="5px"
+	    android:paddingRight="5px"/>
 	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
@@ -111,7 +133,9 @@
 		android:minHeight="25px"
 		android:id="@+id/textViewStarships12"
 		android:background="@color/NiceLightBlue"
-	    android:textStyle="bold"/>
+	    android:textStyle="bold"
+	    android:paddingLeft="5px"
+	    android:paddingRight="5px"/>
 	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
@@ -120,6 +144,8 @@
 		android:minHeight="25px"
 		android:id="@+id/textViewStarships13"
 		android:background="@color/NiceLightBlue"
-	    android:textStyle="bold"/>
+	    android:textStyle="bold"
+	    android:paddingLeft="5px"
+	    android:paddingRight="5px"/>
 
 </LinearLayout>

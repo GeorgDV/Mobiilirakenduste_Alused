@@ -48,13 +48,11 @@ namespace StarWarsApp
             if (view == null)
                 view = _context.LayoutInflater.Inflate(Resource.Layout.movies_row_layout, null);
 
-            view.FindViewById<TextView>(Resource.Id.textViewMovies1).Text = "";
             view.FindViewById<TextView>(Resource.Id.textViewMoviesTitle).Text = "Title: " + item.Title;
             view.FindViewById<TextView>(Resource.Id.textViewMoviesYear).Text = "Year: " + item.Release_Date.Year.ToString();
             view.FindViewById<TextView>(Resource.Id.textViewMoviesDirector).Text = "Director: " + item.Producer;
             view.FindViewById<TextView>(Resource.Id.textViewMoviesProducer).Text = "Producer: " + item.Director;
             view.FindViewById<TextView>(Resource.Id.textViewMoviesDesc).Text = item.Opening_Crawl;
-            view.FindViewById<TextView>(Resource.Id.textViewMovies2).Text = "";
 
             return view;
         }

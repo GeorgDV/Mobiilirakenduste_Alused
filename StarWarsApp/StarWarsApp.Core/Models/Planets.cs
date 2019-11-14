@@ -15,14 +15,14 @@ namespace StarWarsApp.Core.Models
     public partial class PlanetsDetails
     {
         public string Name { get; set; }
-        public long Rotation_Period { get; set; }
-        public long Orbital_Period { get; set; }
-        public long Diameter { get; set; }
+        public string Rotation_Period { get; set; }
+        public string Orbital_Period { get; set; }
+        public string Diameter { get; set; }
         public string Climate { get; set; }
         public string Gravity { get; set; }
         public string Terrain { get; set; }
-        public long Surface_Water { get; set; }
-        public long Population { get; set; }
+        public string Surface_Water { get; set; }
+        public string Population { get; set; }
         //public Uri[] Residents { get; set; }
         //public Uri[] Films { get; set; }
         //public DateTimeOffset Created { get; set; }

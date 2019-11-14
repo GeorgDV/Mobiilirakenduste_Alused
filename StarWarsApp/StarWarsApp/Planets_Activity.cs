@@ -16,16 +16,16 @@ namespace StarWarsApp
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Planets_Layout);
 
-            var searchBar = FindViewById<EditText>(Resource.Id.searchEditTextPlanets);
-            var searchButton = FindViewById<Button>(Resource.Id.searchButtonPlanets);
-            var peopleListView = FindViewById<ListView>(Resource.Id.planetsListView);
+            var searchBar2 = FindViewById<EditText>(Resource.Id.searchEditTextPlanets);
+            var searchButton2 = FindViewById<Button>(Resource.Id.searchButtonPlanets);
+            var planetListView = FindViewById<ListView>(Resource.Id.planetsListView);
 
-            searchButton.Click += async delegate
+            searchButton2.Click += async delegate
             {
-                string searchWord = searchBar.Text;
+                string searchWord = searchBar2.Text;
                 string queryString = "https://swapi.co/api/planets/?search=" + searchWord;
                 var data = await DataServicePlanets.GetStarWarsPlanets(queryString);
-                peopleListView.Adapter = new StarWarsPlanetsAdapter(this, data.Results);
+                planetListView.Adapter = new StarWarsPlanetsAdapter(this, data.Results);
             };
 
         }

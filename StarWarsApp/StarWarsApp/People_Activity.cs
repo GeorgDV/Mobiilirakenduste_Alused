@@ -16,14 +16,14 @@ namespace StarWarsApp
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.People_Layout);
 
-            var searchBar = FindViewById<EditText>(Resource.Id.searchEditText);
-            var searchButton = FindViewById<Button>(Resource.Id.searchButton);
+            var searchBar1 = FindViewById<EditText>(Resource.Id.searchEditText);
+            var searchButton1 = FindViewById<Button>(Resource.Id.searchButton);
             var peopleListView = FindViewById<ListView>(Resource.Id.peopleListView);
             //var drawable = (int)typeof(Resource.Drawable).GetField("Luke_skywalker.jpg").GetValue(null);
 
-            searchButton.Click += async delegate
+            searchButton1.Click += async delegate
             {
-                string searchWord = searchBar.Text;
+                string searchWord = searchBar1.Text;
                 string queryString = "https://swapi.co/api/people/?search=" + searchWord;
                 var data = await DataServicePeople.GetStarWarsPeople(queryString);
                 peopleListView.Adapter = new StarWarsPeopleAdapter(this, data.Results);

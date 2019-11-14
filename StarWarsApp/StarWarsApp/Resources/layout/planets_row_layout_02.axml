@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+	android:padding="10px">
 
 	<TextView
 		android:text="Text"
@@ -13,7 +14,8 @@
 		android:id="@+id/textViewPlanets1"
 		android:background="@color/NiceLightBlue"
 		android:textStyle="bold"
-		android:textSize="38px" />
+		android:textSize="38px"
+	    android:padding="5px"/>
 	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
@@ -22,7 +24,9 @@
 		android:minHeight="25px"
 		android:id="@+id/textViewPlanets2"
 		android:background="@color/NiceLightBlue"
-	    android:textStyle="bold"/>
+	    android:textStyle="bold"
+	    android:paddingLeft="5px"
+	    android:paddingRight="5px"/>
 	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
@@ -31,7 +35,9 @@
 		android:minHeight="25px"
 		android:id="@+id/textViewPlanets3"
 		android:background="@color/NiceLightBlue"
-	    android:textStyle="bold"/>
+	    android:textStyle="bold"
+	    android:paddingLeft="5px"
+	    android:paddingRight="5px"/>
 	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
@@ -40,7 +46,9 @@
 		android:minHeight="25px"
 		android:id="@+id/textViewPlanets4"
 		android:background="@color/NiceLightBlue"
-		android:textStyle="bold"/>
+		android:textStyle="bold"
+	    android:paddingLeft="5px"
+	    android:paddingRight="5px"/>
 	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
@@ -49,7 +57,9 @@
 		android:minHeight="25px"
 		android:id="@+id/textViewPlanets5"
 		android:background="@color/NiceLightBlue"
-	    android:textStyle="bold"/>
+	    android:textStyle="bold"
+	    android:paddingLeft="5px"
+	    android:paddingRight="5px"/>
 	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
@@ -58,7 +68,9 @@
 		android:minHeight="25px"
 		android:id="@+id/textViewPlanets6"
 		android:background="@color/NiceLightBlue"
-	    android:textStyle="bold"/>
+	    android:textStyle="bold"
+	    android:paddingLeft="5px"
+	    android:paddingRight="5px"/>
 	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
@@ -67,7 +79,9 @@
 		android:minHeight="25px"
 		android:id="@+id/textViewPlanets7"
 		android:background="@color/NiceLightBlue"
-		android:textStyle="bold"/>
+		android:textStyle="bold"
+	    android:paddingLeft="5px"
+	    android:paddingRight="5px"/>
 	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
@@ -76,7 +90,9 @@
 		android:minHeight="25px"
 		android:id="@+id/textViewPlanets8"
 		android:background="@color/NiceLightBlue"
-	    android:textStyle="bold"/>
+	    android:textStyle="bold"
+	    android:paddingLeft="5px"
+	    android:paddingRight="5px"/>
 	<TextView
 		android:text="Text"
 		android:layout_width="match_parent"
@@ -85,6 +101,8 @@
 		android:minHeight="25px"
 		android:id="@+id/textViewPlanets9"
 		android:background="@color/NiceLightBlue"
-	    android:textStyle="bold"/>
+	    android:textStyle="bold"
+	    android:paddingLeft="5px"
+	    android:paddingRight="5px"/>
 
 </LinearLayout>

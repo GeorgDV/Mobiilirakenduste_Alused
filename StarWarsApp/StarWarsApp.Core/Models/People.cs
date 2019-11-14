@@ -15,8 +15,8 @@ namespace StarWarsApp.Core.Models
     public partial class PeopleDetails
     {
         public string Name { get; set; }
-        public long Height { get; set; }
-        public long Mass { get; set; }
+        public string Height { get; set; }
+        public string Mass { get; set; }
         public string Hair_Color { get; set; }
         public string Skin_Color { get; set; }
         public string Eye_Color { get; set; }
