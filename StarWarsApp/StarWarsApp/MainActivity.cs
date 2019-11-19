@@ -6,6 +6,10 @@ using Android.Widget;
 using StarWarsApp.Core;
 using System;
 using Android.Content;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+
 
 namespace StarWarsApp
 {
@@ -15,6 +19,9 @@ namespace StarWarsApp
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            AppCenter.Start("8bd811f0-e45f-4d87-9dc1-c38770c9249a",
+                   typeof(Analytics), typeof(Crashes));
+
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
