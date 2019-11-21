@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@drawable/galaxy_pic">
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/movieDetWrapper1"
+			android:gravity="center"
+			android:layout_marginBottom="15px"
+			android:background="@color/DarkBlue"
+			android:padding="10px"> 
+
+		<TextView
+			android:text="Title: A New Hope"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:id="@+id/textViewMDetailsTitle"
+			android:background="@color/NiceLightBlue"
+			android:textStyle="bold"
+			android:textSize="42px" 
+			android:layout_weight="0.35"
+		    android:padding="5px"/>
+
+		<TextView
+			android:text="Year: 1999"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:id="@+id/textViewMDetailsYear"
+			android:background="@color/NiceLightBlue"
+			android:textStyle="bold"
+			android:textSize="40px" 
+			android:layout_weight="1"
+		    android:padding="5px"/>
+
+	</LinearLayout>
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/movieDetWrapper2"
+			android:gravity="center"
+			android:layout_marginBottom="15px"
+			android:background="@color/DarkBlue"
+			android:padding="10px">
+
+		<TextView
+			android:text="Director: XD"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:id="@+id/textViewMDetailsDirector"
+			android:background="@color/NiceLightBlue"
+			android:textStyle="bold"
+			android:textSize="36px" 
+			android:layout_weight="1"
+		    android:paddingLeft="5px"
+	        android:paddingRight="5px"/>
+		<TextView
+			android:text="Producer: DX"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:id="@+id/textViewMDetailsProducer"
+			android:background="@color/NiceLightBlue"
+			android:textStyle="bold"
+			android:textSize="36px" 
+			android:layout_weight="1"
+		    android:paddingLeft="5px"
+	        android:paddingRight="5px"/>
+
+		</LinearLayout>
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/movieDetWrapper3"
+			android:gravity="center"
+			android:background="@color/DarkBlue"
+			android:padding="10px">
+
+		<TextView
+			android:text="Description: Lorem ipsum..."
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:id="@+id/textViewMDetailsDesc"
+			android:background="@color/EvenNicerLightBlue"
+			android:textStyle="bold"
+			android:textSize="32px" 
+		    android:gravity="center"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+

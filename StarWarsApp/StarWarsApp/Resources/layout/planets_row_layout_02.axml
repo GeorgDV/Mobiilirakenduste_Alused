@@ -103,6 +103,7 @@
 		android:background="@color/NiceLightBlue"
 	    android:textStyle="bold"
 	    android:paddingLeft="5px"
-	    android:paddingRight="5px"/>
+	    android:paddingRight="5px"
+		android:layout_marginBottom="15px"/>
 
 </LinearLayout>

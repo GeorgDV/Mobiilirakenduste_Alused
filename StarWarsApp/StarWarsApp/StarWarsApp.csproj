@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MovieDetailsActivity.cs" />
     <Compile Include="Movies_Activity.cs" />
     <Compile Include="People_Activity.cs" />
     <Compile Include="Planets_Activity.cs" />
@@ -175,6 +176,14 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\movies_row_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Galaxy_Pic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Movie_Details_Layout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

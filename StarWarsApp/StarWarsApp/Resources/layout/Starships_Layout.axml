@@ -33,6 +33,6 @@
 		android:minHeight="25px"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		android:background="@color/SlightlyLightBlue"
+		android:background="@drawable/galaxy_pic"
 		android:id="@+id/starshipsListView" />
 </LinearLayout>
