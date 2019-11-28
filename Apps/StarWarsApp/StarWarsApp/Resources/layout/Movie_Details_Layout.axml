@@ -11,7 +11,7 @@
 			android:id="@+id/movieDetWrapper1"
 			android:gravity="center"
 			android:layout_marginBottom="15px"
-			android:background="@color/DarkBlue"
+			android:background="@color/LighterDarkBlue"
 			android:padding="10px"> 
 
 		<TextView
@@ -21,7 +21,8 @@
 			android:minWidth="25px"
 			android:minHeight="25px"
 			android:id="@+id/textViewMDetailsTitle"
-			android:background="@color/NiceLightBlue"
+			android:background="@color/LighterLighterDarkBlue"
+			android:textColor="@color/KindaWhite"
 			android:textStyle="bold"
 			android:textSize="42px" 
 			android:layout_weight="0.35"
@@ -34,7 +35,8 @@
 			android:minWidth="25px"
 			android:minHeight="25px"
 			android:id="@+id/textViewMDetailsYear"
-			android:background="@color/NiceLightBlue"
+			android:background="@color/LighterLighterDarkBlue"
+			android:textColor="@color/KindaWhite"
 			android:textStyle="bold"
 			android:textSize="40px" 
 			android:layout_weight="1"
@@ -48,7 +50,7 @@
 			android:id="@+id/movieDetWrapper2"
 			android:gravity="center"
 			android:layout_marginBottom="15px"
-			android:background="@color/DarkBlue"
+			android:background="@color/LighterDarkBlue"
 			android:padding="10px">
 
 		<TextView
@@ -58,7 +60,8 @@
 			android:minWidth="25px"
 			android:minHeight="25px"
 			android:id="@+id/textViewMDetailsDirector"
-			android:background="@color/NiceLightBlue"
+			android:background="@color/LighterLighterDarkBlue"
+			android:textColor="@color/KindaWhite"
 			android:textStyle="bold"
 			android:textSize="36px" 
 			android:layout_weight="1"
@@ -71,7 +74,8 @@
 			android:minWidth="25px"
 			android:minHeight="25px"
 			android:id="@+id/textViewMDetailsProducer"
-			android:background="@color/NiceLightBlue"
+			android:background="@color/LighterLighterDarkBlue"
+			android:textColor="@color/KindaWhite"
 			android:textStyle="bold"
 			android:textSize="36px" 
 			android:layout_weight="1"
@@ -86,7 +90,7 @@
 			android:layout_height="wrap_content"
 			android:id="@+id/movieDetWrapper3"
 			android:gravity="center"
-			android:background="@color/DarkBlue"
+			android:background="@color/LighterDarkBlue"
 			android:padding="10px">
 
 		<TextView
@@ -96,7 +100,8 @@
 			android:minWidth="25px"
 			android:minHeight="25px"
 			android:id="@+id/textViewMDetailsDesc"
-			android:background="@color/EvenNicerLightBlue"
+			android:background="@color/LighterLighterDarkBlue"
+			android:textColor="@color/KindaWhite"
 			android:textStyle="bold"
 			android:textSize="32px" 
 		    android:gravity="center"/>

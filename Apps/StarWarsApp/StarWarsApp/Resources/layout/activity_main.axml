@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@color/LighterDarkBlue">
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal"
+		android:layout_width="wrap_content"
+		android:layout_height="440px"
+		android:id="@+id/mainImageWrapper"
+		android:gravity="center">
+		<ImageView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/mainImageView"
+			android:src="@drawable/star_wars_wide"/>
+	</LinearLayout >
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="50px"
+		android:id="@+id/textWrapper1">
+
+		<TextView
+		android:text="Characters"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/textViewMain1"
+		android:background="@color/LighterDarkBlue"
+		android:textStyle="bold"
+		android:textSize="42px"
+		android:gravity="center"
+		android:textColor="@color/KindaWhite"/>
+
+		<TextView
+		android:text="Planets"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/textViewMain2"
+		android:background="@color/LighterDarkBlue"
+		android:textStyle="bold"
+		android:textSize="42px"
+		android:gravity="center"
+		android:textColor="@color/KindaWhite" />
+
+
+	</LinearLayout>
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="290px"
+		android:id="@+id/buttonWrapper1">
+		<Button
+			android:text=""
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:id="@+id/toPeopleButton" 
+			android:background="@drawable/luke_skywalker"/>
+
+		<Button
+			android:text=""
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:id="@+id/toPlanetsButton" 
+			android:background="@drawable/star_wars_endor"/>
+
+	</LinearLayout>
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="50px"
+		android:id="@+id/textWrapper2">
+
+			<TextView
+				android:text="Starships"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:id="@+id/textViewMain3"
+				android:background="@color/LighterDarkBlue"
+				android:textStyle="bold"
+				android:textSize="42px"
+				android:gravity="center"
+				android:textColor="@color/KindaWhite"/>
+
+			<TextView
+				android:text="Movies"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:id="@+id/textViewMain4"
+				android:background="@color/LighterDarkBlue"
+				android:textStyle="bold"
+				android:textSize="42px"
+				android:gravity="center"
+				android:textColor="@color/KindaWhite" />
+
+
+	</LinearLayout>
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="290px"
+		android:id="@+id/buttonWrapper2">
+		<Button
+			android:text=""
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:id="@+id/toStarshipsButton" 
+			android:background="@drawable/star_wars_milfalcon"/>
+		<Button
+			android:text=""
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:id="@+id/toMoviesListButton" 
+			android:background="@drawable/star_wars"/>
+
+	</LinearLayout>
+
+</LinearLayout>

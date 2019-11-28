@@ -13,8 +13,11 @@
     <color name="SlightlyLightBlue">#3996BD</color>
     <color name="DarkBlue">#2A447C</color>
     <color name="LighterDarkBlue">#2D4B8D</color>
+  <color name="LighterLighterDarkBlue">#3E5DA3</color>
     <color name="LightestDarkBlue">#5B8CF5</color>
     <color name="EvenNicerLightBlue02">#3BB2DF</color>
     <color name="EvenDarkerBlue">#203666</color>
+  <color name="Black">#000000</color>
+  <color name="KindaWhite">#EEEAE9</color>
 
 </resources>

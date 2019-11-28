@@ -10,7 +10,7 @@
 		android:layout_height="wrap_content"
 		android:id="@+id/movieListElement"
 		android:padding="10px"
-		android:background="@color/SlightlyLightBlue"
+		android:background="@color/LighterDarkBlue"
 		android:layout_marginBottom="15px">
 
 		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -27,7 +27,8 @@
 				android:minWidth="25px"
 				android:minHeight="25px"
 				android:id="@+id/textViewMoviesTitle"
-				android:background="@color/NiceLightBlue"
+				android:background="@color/LighterLighterDarkBlue"
+				android:textColor="@color/KindaWhite"
 				android:textStyle="bold"
 				android:textSize="34px" 
 				android:layout_weight="0.35"
@@ -40,7 +41,8 @@
 				android:minWidth="25px"
 				android:minHeight="25px"
 				android:id="@+id/textViewMoviesYear"
-				android:background="@color/NiceLightBlue"
+				android:background="@color/LighterLighterDarkBlue"
+				android:textColor="@color/KindaWhite"
 				android:textStyle="bold"
 				android:textSize="34px" 
 				android:layout_weight="1"
