@@ -12,7 +12,7 @@
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
 
-        <Button Text="Click Me!"></Button>
+        <Button Text="Click Me!" Clicked="Button_Clicked"></Button>
     </StackLayout>
 
 </ContentPage>
