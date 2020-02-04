@@ -3,6 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CrossPlatformApp.App">
     <Application.Resources>
+        <!--<Thickness x:Key="PageMargin">20</Thickness>-->
+        <Color x:Key="AppBackground">WhiteSmoke</Color>
+        <Color x:Key="AndroidNavBarColor">#2196F3</Color>
+        <Color x:Key="UWPNavBarColor">WhiteSmoke</Color>
+        <Color x:Key="AndroidNavBarTextColor">White</Color>
+        <Color x:Key="UWPNavBarTextColor">Black</Color>
 
+        <Style TargetType="{x:Type NavigationPage}">
+            <Setter Property="BarBackgroundColor"
+                    Value="{OnPlatform Android={StaticResource AndroidNavBarColor},
+                            UWP={StaticResource UWPNavBarColor}}"></Setter>
+
+            <Setter Property="BarTextColor"
+                    Value="{OnPlatform Android={StaticResource AndroidNavBarTextColor},
+                            UWP={StaticResource UWPNavBarTextColor}}"></Setter>
+        </Style>
     </Application.Resources>
 </Application>
