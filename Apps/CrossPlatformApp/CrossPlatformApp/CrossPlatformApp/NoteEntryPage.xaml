@@ -2,6 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CrossPlatformApp.NoteEntryPage">
+    
+    <!--Define all buttons styling on THIS page-->
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="Medium"></Setter>
+            <Setter Property="BackgroundColor" Value="SkyBlue"></Setter>
+            <Setter Property="TextColor" Value="Black"></Setter>
+            <Setter Property="CornerRadius" Value="10"></Setter>
+        </Style>
+    </ContentPage.Resources>
+    
     <ContentPage.Content>
         <StackLayout
            HorizontalOptions="Center"
