@@ -19,26 +19,30 @@ namespace CrossPlatformApp
 			InitializeComponent ();
 		}
 
-        protected override void OnAppearing()
+        protected override async void OnAppearing()
         {
             base.OnAppearing();
 
-            var notes = new List<Note>();
-            var files = Directory.EnumerateFiles(App.FolderPath, "*.notes.txt");
+            NotesListView.ItemsSource = await App.dbContext.GetNotesAsync();
 
-            foreach (var filename in files)
-            {
-                notes.Add(new Note 
-                {
-                    Filename = filename,
-                    Text = File.ReadAllText(filename),
-                    Date = File.GetCreationTime(filename),
-                });
-            }
 
-            NotesListView.ItemsSource = notes
-                                        .OrderBy(d => d.Date)
-                                        .ToList();
+            //LOCAL NOTES FILE DATABASE
+            //var notes = new List<Note>();
+            //var files = Directory.EnumerateFiles(App.FolderPath, "*.notes.txt");
+
+            //foreach (var filename in files)
+            //{
+            //    notes.Add(new Note 
+            //    {
+            //        Filename = filename,
+            //        Text = File.ReadAllText(filename),
+            //        Date = File.GetCreationTime(filename),
+            //    });
+            //}
+
+            //NotesListView.ItemsSource = notes
+            //                            .OrderBy(d => d.Date)
+            //                            .ToList();
         }
 
         async void OnNoteAddedClicked(object sender, EventArgs e)

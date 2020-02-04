@@ -22,16 +22,20 @@ namespace CrossPlatformApp
         async void SaveBtn_Clicked(object sender, EventArgs e)
         {
             var note = (Note)BindingContext;
+            note.Date = DateTime.UtcNow;
+            await App.dbContext.SaveNoteAsync(note);
 
-            if (string.IsNullOrWhiteSpace(note.Filename))
-            {
-                var filename = Path.Combine(App.FolderPath, $"{Path.GetRandomFileName()}.notes.txt");
-                File.WriteAllText(filename, note.Text);
-            }
-            else
-            {
-                File.WriteAllText(note.Filename, note.Text);
-            }
+
+            //LOCAL NOTES DB CODE
+            //if (string.IsNullOrWhiteSpace(note.Filename))
+            //{
+            //    var filename = Path.Combine(App.FolderPath, $"{Path.GetRandomFileName()}.notes.txt");
+            //    File.WriteAllText(filename, note.Text);
+            //}
+            //else
+            //{
+            //    File.WriteAllText(note.Filename, note.Text);
+            //}
 
             await Navigation.PopAsync();
         }
@@ -39,11 +43,13 @@ namespace CrossPlatformApp
         async void DeleteBtn_Clicked(object sender, EventArgs e)
         {
             var note = (Note)BindingContext;
+            await App.dbContext.DeleteNoteAsync(note);
 
-            if (File.Exists(note.Filename))
-            {
-                File.Delete(note.Filename);
-            }
+            //LOCAL DB CODE
+            //if (File.Exists(note.Filename))
+            //{
+            //    File.Delete(note.Filename);
+            //}
 
             await Navigation.PopAsync();
         }

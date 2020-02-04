@@ -8,7 +8,7 @@
            VerticalOptions="StartAndExpand">
             <!-- Place new controls here -->
             <Editor x:Name="textEditor" Placeholder="Enter Note"
-                HeightRequest="100" Text="{Binding Text}"></Editor>
+                HeightRequest="500" Text="{Binding Text}"></Editor>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"></ColumnDefinition>
