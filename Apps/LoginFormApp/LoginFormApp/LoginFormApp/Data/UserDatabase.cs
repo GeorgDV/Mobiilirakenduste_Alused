@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace CrossPlatformApp.Data
 {
-    public class ApplicationDatabase
+    public class UserDatabase
     {
         SQLiteAsyncConnection _dbContext;
 
-        public ApplicationDatabase(string dbPath)
+        public UserDatabase(string dbPath)
         {
             _dbContext = new SQLiteAsyncConnection(dbPath);
             _dbContext.CreateTableAsync<User>().Wait();
@@ -22,10 +22,18 @@ namespace CrossPlatformApp.Data
             return await _dbContext.Table<User>().ToListAsync();
         }
 
-        public async Task<User> GetUserAsync(int id)
+        public async Task<User> GetUserByIdAsync(int id)
         {
             return await _dbContext.Table<User>()
                            .Where(x => x.UserId == id)
+                           .FirstOrDefaultAsync();
+        }
+
+        public async Task<User> GetUserByNameAndPassword(string username, string password)
+        {
+            return await _dbContext.Table<User>()
+                           .Where(x => x.UserName == username 
+                           && x.Password == password)
                            .FirstOrDefaultAsync();
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LoginFormApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +22,19 @@ namespace LoginFormApp
 
         private void SignUpBtn_Clicked(object sender, EventArgs e)
         {
+            /*
+            User newUser = newUser()
 
+            if (!UserExists(newUsername, newPassword))
+            {
+                App.dbContext.SaveUserAsync()
+            }
+            */
+        }
+
+        private bool UserExists(string username, string password)
+        {
+            return Convert.ToBoolean(App.dbContext.GetUserByNameAndPassword(username, password));
         }
     }
 }

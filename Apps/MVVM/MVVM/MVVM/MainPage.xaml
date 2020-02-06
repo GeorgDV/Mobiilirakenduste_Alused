@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MVVM"
+             xmlns:vm="clr-namespace:MVVM.ViewModels;assembly=MVVM"
+             x:Class="MVVM.MainPage">
+
+    <ContentPage.BindingContext>
+        <vm:MainViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <local:DoubleRoundingConverter x:Key="stringConverter"></local:DoubleRoundingConverter>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Aqua">
+            <Label Text="Tip Calculator" FontSize="Large"></Label>
+            <Label Text="How much did your lunch cost?" FontSize="Medium" Margin="10"></Label>
+            <Entry Text="{Binding SubTotal}" WidthRequest="250"></Entry>
+            <Label Text="How big is your generosity?" FontSize="Medium" Margin="10"></Label>
+            <Slider Value="{Binding Generosity, Converter={StaticResource stringConverter}}" WidthRequest="250"></Slider>
+            <Label Text="According to our high-level scientific calculations your Tip amount would be.." FontSize="Medium" Margin="10"></Label>
+            <Label Text="{Binding Tip}" WidthRequest="250" FontSize="Medium"></Label>
+            <Label Text="..and your total cost would be.." FontSize="Medium" Margin="10"></Label>
+            <Label Text="{Binding Total}" WidthRequest="250" FontSize="Medium"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
