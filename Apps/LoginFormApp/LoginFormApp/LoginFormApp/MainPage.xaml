@@ -33,7 +33,7 @@
             <Label Text="Login" FontSize="Large" VerticalOptions="Center"/>
 
             <Entry x:Name="UserNameEntry" Placeholder="Enter your username"></Entry>
-            <Entry x:Name="PasswordEntry" Placeholder="Enter your password"></Entry>
+            <Entry x:Name="PasswordEntry" Placeholder="Enter your password" IsPassword="True"></Entry>
 
 
             <Grid>
