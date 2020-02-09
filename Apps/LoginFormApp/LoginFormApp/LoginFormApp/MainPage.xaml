@@ -32,8 +32,10 @@
             <!-- Place new controls here -->
             <Label Text="Login" FontSize="Large" VerticalOptions="Center"/>
 
-            <Entry x:Name="UserNameEntry" Placeholder="Enter your username"></Entry>
-            <Entry x:Name="PasswordEntry" Placeholder="Enter your password" IsPassword="True"></Entry>
+            <Label x:Name="OutputLabel" Text="" FontSize="Small" VerticalOptions="Center"/>
+
+            <Entry x:Name="UserNameEntry" Placeholder="Enter your username" Text=""></Entry>
+            <Entry x:Name="PasswordEntry" Placeholder="Enter your password" IsPassword="True" Text=""></Entry>
 
 
             <Grid>

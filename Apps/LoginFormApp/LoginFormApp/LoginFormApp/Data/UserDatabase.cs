@@ -29,11 +29,10 @@ namespace CrossPlatformApp.Data
                            .FirstOrDefaultAsync();
         }
 
-        public async Task<User> GetUserByNameAndPassword(string username, string password)
+        public Task<User> GetUserByNameAndPassword(string username, string password)
         {
-            return await _dbContext.Table<User>()
-                           .Where(x => x.UserName == username 
-                           && x.Password == password)
+            return  _dbContext.Table<User>()
+                           .Where(x => x.UserName.Equals(username) && x.Password.Equals(password))
                            .FirstOrDefaultAsync();
         }
 
@@ -53,6 +52,5 @@ namespace CrossPlatformApp.Data
         {
             return await _dbContext.DeleteAsync(User);
         }
-
     }
 }

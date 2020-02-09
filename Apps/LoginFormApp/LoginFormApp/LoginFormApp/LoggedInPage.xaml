@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LoginFormApp.LoggedInPage">
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="Medium"></Setter>
+            <Setter Property="BackgroundColor" Value="SkyBlue"></Setter>
+            <Setter Property="TextColor" Value="Black"></Setter>
+            <Setter Property="CornerRadius" Value="10"></Setter>
+            <Setter Property="WidthRequest">150</Setter>
+        </Style>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+            <Label Text="Successfully Logged In!" FontSize="Large"/>
+            <Label Text="Logged in as:" FontSize="Medium"></Label>
+            <Label x:Name="UserLabel" Text="{Binding UserName}" FontSize="Medium"></Label>
+
+            <Button x:Name="DeleteBtn" Text="Delete this user" Clicked="DeleteBtn_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
