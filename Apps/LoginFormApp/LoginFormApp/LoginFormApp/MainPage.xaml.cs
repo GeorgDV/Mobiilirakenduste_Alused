@@ -56,7 +56,7 @@ namespace LoginFormApp
             {
                 OutputLabel.Text = "Username and/or Password field cannot be empty!";
             }
-            else if ((!UserExists(newUsername, newPassword)) && (newUsername != string.Empty && newPassword != string.Empty))
+            else if ((!UserExists(newUsername, newPassword)) && (newUsername != "" && newPassword != ""))
             {
                 var newUser = new User() { UserName = newUsername, Password = newPassword };
                 await App.dbContext.SaveUserAsync(newUser);

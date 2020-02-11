@@ -12,7 +12,6 @@
             <Setter Property="BackgroundColor" Value="SkyBlue"></Setter>
             <Setter Property="TextColor" Value="Black"></Setter>
             <Setter Property="CornerRadius" Value="10"></Setter>
-            <Setter Property="WidthRequest">150</Setter>
         </Style>
     </ContentPage.Resources>
     

@@ -10,14 +10,12 @@
             <Setter Property="BackgroundColor" Value="SkyBlue"></Setter>
             <Setter Property="TextColor" Value="Black"></Setter>
             <Setter Property="CornerRadius" Value="10"></Setter>
-            <Setter Property="WidthRequest">150</Setter>
         </Style>
 
         <Style TargetType="Entry">
             <Setter Property="FontSize" Value="Medium"></Setter>
             <Setter Property="BackgroundColor" Value="White"></Setter>
             <Setter Property="TextColor" Value="Black"></Setter>
-            <Setter Property="WidthRequest">300</Setter>
         </Style>
 
         <Style TargetType="StackLayout">
@@ -30,9 +28,9 @@
                      VerticalOptions="Center"
                      Padding="100">
             <!-- Place new controls here -->
-            <Label Text="Login" FontSize="Large" VerticalOptions="Center"/>
+            <Label Text="Login" FontSize="Large"/>
 
-            <Label x:Name="OutputLabel" Text="" FontSize="Small" VerticalOptions="Center"/>
+            <Label x:Name="OutputLabel" Text="" FontSize="Small"/>
 
             <Entry x:Name="UserNameEntry" Placeholder="Enter your username" Text=""></Entry>
             <Entry x:Name="PasswordEntry" Placeholder="Enter your password" IsPassword="True" Text=""></Entry>
