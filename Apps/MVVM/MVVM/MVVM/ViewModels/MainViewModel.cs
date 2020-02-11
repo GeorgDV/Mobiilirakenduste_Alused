@@ -81,6 +81,16 @@ namespace MVVM.ViewModels
             }
         }
 
+       // public int TestProperty { get; set; }
+       // IS EQUAL TO..
+
+        public int _testProperty;
+        public int TestProperty
+        {
+            get { return _testProperty; }
+            set { _testProperty = value; }
+        }
+
         private void Recalculate()
         {
             Tip = SubTotal * Generosity;

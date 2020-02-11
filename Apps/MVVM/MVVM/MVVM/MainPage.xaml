@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MVVM"
              xmlns:vm="clr-namespace:MVVM.ViewModels;assembly=MVVM"
-             x:Class="MVVM.MainPage">
+             x:Class="MVVM.MainPage"
+             BackgroundColor="Lavender">
 
     <ContentPage.BindingContext>
         <vm:MainViewModel/>
@@ -14,16 +15,18 @@
     </ContentPage.Resources>
     
     <ContentPage.Content>
-        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Aqua">
-            <Label Text="Tip Calculator" FontSize="Large"></Label>
-            <Label Text="How much did your lunch cost?" FontSize="Medium" Margin="10"></Label>
-            <Entry Text="{Binding SubTotal}" WidthRequest="250"></Entry>
-            <Label Text="How big is your generosity?" FontSize="Medium" Margin="10"></Label>
-            <Slider Value="{Binding Generosity, Converter={StaticResource stringConverter}}" WidthRequest="250"></Slider>
-            <Label Text="According to our high-level scientific calculations your Tip amount would be.." FontSize="Medium" Margin="10"></Label>
-            <Label Text="{Binding Tip}" WidthRequest="250" FontSize="Medium"></Label>
-            <Label Text="..and your total cost would be.." FontSize="Medium" Margin="10"></Label>
-            <Label Text="{Binding Total}" WidthRequest="250" FontSize="Medium"></Label>
+        <StackLayout VerticalOptions="Fill" HorizontalOptions="CenterAndExpand" Padding="5">
+            <Label Text="Tip Calculator" FontSize="50" Margin="20" HorizontalOptions="Center"></Label>
+            <Label Text="Cost without Tip:" FontSize="Medium" Margin="5"></Label>
+            <Entry Text="{Binding SubTotal}" FontSize="30" WidthRequest="400" Margin="5" BackgroundColor="WhiteSmoke"></Entry>
+            <Label Text="Tip Percentage:" FontSize="Medium" Margin="5"></Label>
+            <Slider Value="{Binding Generosity, Converter={StaticResource stringConverter}}" WidthRequest="250" Margin="5"></Slider>
+            <Label Text="Tip Amount:" FontSize="Medium" Margin="5"></Label>
+            <Label Text="{Binding Tip}" FontSize="30" Margin="5" HorizontalOptions="Center"></Label>
+            <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Aqua" WidthRequest="500">
+                <Label Text="Total Cost:" FontSize="40" Margin="5"></Label>
+                <Label Text="{Binding Total}" Margin="5" HorizontalOptions="Center" FontSize="50" TextColor="DarkBlue"></Label>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 
