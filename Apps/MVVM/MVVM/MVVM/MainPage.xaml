@@ -16,16 +16,16 @@
     
     <ContentPage.Content>
         <StackLayout VerticalOptions="Fill" HorizontalOptions="CenterAndExpand" Padding="5">
-            <Label Text="Tip Calculator" FontSize="50" Margin="20" HorizontalOptions="Center"></Label>
+            <Label Text="Tip Calculator" FontSize="40" Margin="5" HorizontalOptions="Center"></Label>
             <Label Text="Cost without Tip:" FontSize="Medium" Margin="5"></Label>
             <Entry Text="{Binding SubTotal}" FontSize="30" WidthRequest="400" Margin="5" BackgroundColor="WhiteSmoke"></Entry>
             <Label Text="Tip Percentage:" FontSize="Medium" Margin="5"></Label>
             <Slider Value="{Binding Generosity, Converter={StaticResource stringConverter}}" WidthRequest="250" Margin="5"></Slider>
             <Label Text="Tip Amount:" FontSize="Medium" Margin="5"></Label>
-            <Label Text="{Binding Tip}" FontSize="30" Margin="5" HorizontalOptions="Center"></Label>
+            <Label Text="{Binding Tip}" FontSize="24" Margin="5" HorizontalOptions="Center"></Label>
             <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Aqua" WidthRequest="500">
-                <Label Text="Total Cost:" FontSize="40" Margin="5"></Label>
-                <Label Text="{Binding Total}" Margin="5" HorizontalOptions="Center" FontSize="50" TextColor="DarkBlue"></Label>
+                <Label Text="Total Cost:" FontSize="24" Margin="5"></Label>
+                <Label Text="{Binding Total}" Margin="5" HorizontalOptions="Center" FontSize="34" TextColor="DarkBlue"></Label>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

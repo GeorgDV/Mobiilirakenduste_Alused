@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVM.SettingsPage"
+             BackgroundColor="Lavender">
+    
+    
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Settings" FontSize="40" HorizontalOptions="Center" VerticalOptions="Start" Margin="5"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

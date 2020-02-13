@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVM.FirstTabbedPage"
+             xmlns:local="clr-namespace:MVVM; assembly=MVVM"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core; assembly=MVVM"
+            xmlns:local1="clr-namespace:MVVM"
+            android:TabbedPage.ToolbarPlacement="Bottom">
+  <!--Pages can be added as references or inline-->
+    <local:MainPage Title="Tip Calc." Icon="tip_icon.png"></local:MainPage>
+    <local1:SettingsPage Title="Settings" Icon="settings_icon.png">
+    </local1:SettingsPage>
+    <local1:LanguagePage Title="Language" Icon="language_icon.png">
+    </local1:LanguagePage>
+</TabbedPage>
