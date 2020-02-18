@@ -15,10 +15,13 @@ namespace MVVM
 	{
         public ObservableCollection<string> Languages { get; set; }
 
+        public string selectedLanguage;
+
+
         public LanguagePage ()
 		{
 			InitializeComponent ();
-            LanguageBtn.Clicked += LanguageBtn_Clicked;
+            AddLanguageBtn.Clicked += AddLanguageBtn_Clicked;
 
             Languages = new ObservableCollection<string>
             {
@@ -38,14 +41,32 @@ namespace MVVM
             Languages_ListView.ItemsSource = Languages;
         }
 
-        private async void LanguageBtn_Clicked(object sender, EventArgs e)
+        private void AddLanguageBtn_Clicked(object sender, EventArgs e)
         {
-            return;
+            Languages.Add("Test Language");
         }
 
-        private void Languages_ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private void Languages_ListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            
+            selectedLanguage = e.Item as string;
+            LanguageEditor.Text = selectedLanguage;
+        }
+
+        private void SaveBtn_Clicked(object sender, EventArgs e)
+        {
+            var edit = Languages.FirstOrDefault(x => x == selectedLanguage);
+            if (edit != null)
+            {
+                edit = LanguageEditor.Text;
+            }
+        }
+
+        private void DeleteBtn_Clicked(object sender, EventArgs e)
+        {
+            if (selectedLanguage != null)
+            {
+                Languages.Remove(selectedLanguage);
+            }
         }
     }
 }
