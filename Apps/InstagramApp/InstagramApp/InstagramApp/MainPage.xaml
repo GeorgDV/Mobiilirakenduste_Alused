@@ -11,32 +11,38 @@
            VerticalOptions="CenterAndExpand"
            FontSize="36"/>
 
+        <Button x:Name="AddPostBtn" Text="AddDummyPost" HorizontalOptions="Center" Clicked="AddPostBtn_Clicked"></Button>
+        <Button x:Name="AddNewPostBtn" Text="Add Post" HorizontalOptions="Center" Clicked="AddNewPostBtn_Clicked"></Button>
+        <Button x:Name="DeletePostBtn" Text="Delete Post" HorizontalOptions="Center" Clicked="DeletePostBtn_Clicked"></Button>
+
         <ListView x:Name="Posts_ListView"
                       ItemsSource="{Binding Posts}"
-                      CachingStrategy="RecycleElement">
+                      CachingStrategy="RecycleElement"
+                      ItemTapped="Posts_ListView_ItemTapped">
 
             <!--Built in Cells-->
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Title}"/>
+                    <TextCell Text="{Binding Title}"
+                               Detail="{Binding Date}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
 
             <!--Custom View Cells-->
             <!--
-                <ListView.ItemTemplate>
-                  <DataTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate>
                     <ViewCell>
-                      <StackLayout>
-                        <Label Text="{Binding Text}" 
+                        <StackLayout>
+                            <Label Text="{Binding Title}" 
                                Style="{DynamicResource ListItemTextStyle}" />
-                        <Label Text="{Binding Detail}" 
+                            <Label Text="{Binding Date}" 
                                Style="{DynamicResource ListItemDetailTextStyle}"/>
-                      </StackLayout>
+                        </StackLayout>
                     </ViewCell>
-                  </DataTemplate>
-                </ListView.ItemTemplate>
-                -->
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            -->
         </ListView>
     </StackLayout>
 

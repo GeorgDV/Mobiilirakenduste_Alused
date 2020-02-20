@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InstagramApp.AddPostPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center">
+            <Label Text="Add Post" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand"
+           FontSize="36"/>
+
+            <Entry x:Name="PostTitleEntry" Placeholder="Enter Post Title" FontSize="28"></Entry>
+            <Image x:Name="PhotoImage" />
+            <Button x:Name="TakePictureBtn" Clicked="TakePictureBtn_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,4 +1,5 @@
 ﻿using CrossPlatformApp.Data;
+using InstagramApp.Models;
 using System;
 using System.IO;
 using Xamarin.Forms;
@@ -27,7 +28,7 @@ namespace InstagramApp
             InitializeComponent();
 
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
