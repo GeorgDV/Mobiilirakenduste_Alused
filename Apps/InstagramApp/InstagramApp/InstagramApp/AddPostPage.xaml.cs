@@ -21,13 +21,34 @@ namespace InstagramApp
 
         private async void TakePictureBtn_Clicked(object sender, EventArgs e)
         {
-            var post = (Post)BindingContext;
+            ErrorLabel.Text = "";
             var photo = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions() { });
 
             if (photo != null)
-                PhotoImage.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
+                PhotoImage.Source = photo.Path;
+        }
 
-            post.ImgPath = PhotoImage.Source.ToString();
+        private async void SavePostBtn_Clicked(object sender, EventArgs e)
+        {
+            ErrorLabel.Text = "";
+
+            if ((PostTitleEntry.Text == "" && PhotoImage.Source.ToString() == "File: ") ||
+                (PostTitleEntry.Text == "" || PhotoImage.Source.ToString() == "File: "))
+            {
+                ErrorLabel.Text = "Title and Picture are required!";
+            }
+            else
+            {
+                var post = (Post)BindingContext;
+                post.Title = PostTitleEntry.Text;
+                string currentPath = PhotoImage.Source.ToString();
+                string formattedPath = currentPath.Substring(6);
+                post.ImgPath = formattedPath;
+                post.Date = DateTime.UtcNow;
+                await App.dbContext.SavePostAsync(post);
+                await Navigation.PopAsync();
+            }
+
         }
     }
 }

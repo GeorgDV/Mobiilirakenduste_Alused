@@ -2,47 +2,55 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:InstagramApp"
-             x:Class="InstagramApp.MainPage">
+             x:Class="InstagramApp.MainPage"
+             BackgroundColor="Aqua">
 
-    <StackLayout>
+    <StackLayout WidthRequest="400">
         <!-- Place new controls here -->
         <Label Text="InstagramApp" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand"
-           FontSize="36"/>
+           FontSize="32" FontAttributes="Bold" TextColor="Black"/>
 
-        <Button x:Name="AddPostBtn" Text="AddDummyPost" HorizontalOptions="Center" Clicked="AddPostBtn_Clicked"></Button>
-        <Button x:Name="AddNewPostBtn" Text="Add Post" HorizontalOptions="Center" Clicked="AddNewPostBtn_Clicked"></Button>
-        <Button x:Name="DeletePostBtn" Text="Delete Post" HorizontalOptions="Center" Clicked="DeletePostBtn_Clicked"></Button>
+        <Button x:Name="AddNewPostBtn" Text="Add Post" HorizontalOptions="Center" Clicked="AddNewPostBtn_Clicked"
+                BackgroundColor="DeepSkyBlue"></Button>
 
         <ListView x:Name="Posts_ListView"
                       ItemsSource="{Binding Posts}"
                       CachingStrategy="RecycleElement"
-                      ItemTapped="Posts_ListView_ItemTapped">
+                      ItemSelected="Posts_ListView_ItemSelected"
+                      RowHeight="800">
 
             <!--Built in Cells-->
+            <!--
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Title}"
                                Detail="{Binding Date}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
-
+            -->
             <!--Custom View Cells-->
-            <!--
+            
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout>
+                        <StackLayout Margin="10">
                             <Label Text="{Binding Title}" 
-                               Style="{DynamicResource ListItemTextStyle}" />
+                               Style="{DynamicResource ListItemTextStyle}"
+                               HorizontalOptions="Center"
+                               FontSize="26" FontAttributes="Bold"/>
                             <Label Text="{Binding Date}" 
-                               Style="{DynamicResource ListItemDetailTextStyle}"/>
+                               Style="{DynamicResource ListItemDetailTextStyle}"
+                               HorizontalOptions="Center"
+                               FontSize="16"/>
+                            <Image Source="{Binding ImgPath}"
+                                   HorizontalOptions="CenterAndExpand"></Image>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-            -->
+            
         </ListView>
     </StackLayout>
 
