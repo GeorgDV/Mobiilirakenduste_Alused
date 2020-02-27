@@ -2,8 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:InstagramApp"
+             xmlns:vm="clr-namespace:InstagramApp.ViewModels"
              x:Class="InstagramApp.MainPage"
              BackgroundColor="Aqua">
+
+
+    <ContentPage.BindingContext>
+        <vm:PostsViewModel></vm:PostsViewModel>
+    </ContentPage.BindingContext>
 
     <StackLayout WidthRequest="400">
         <!-- Place new controls here -->
@@ -14,12 +20,14 @@
 
         <Button x:Name="AddNewPostBtn" Text="Add Post" HorizontalOptions="Center" Clicked="AddNewPostBtn_Clicked"
                 BackgroundColor="DeepSkyBlue"></Button>
+        <Button x:Name="AddDummyPost" Text="Add Dummy Post" HorizontalOptions="Center" Clicked="AddDummyPost_Clicked"
+                BackgroundColor="DeepSkyBlue"></Button>
 
         <ListView x:Name="Posts_ListView"
                       ItemsSource="{Binding Posts}"
                       CachingStrategy="RecycleElement"
                       ItemSelected="Posts_ListView_ItemSelected"
-                      RowHeight="800">
+                      RowHeight="1200">
 
             <!--Built in Cells-->
             <!--

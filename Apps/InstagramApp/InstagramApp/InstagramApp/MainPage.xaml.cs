@@ -11,19 +11,17 @@ namespace InstagramApp
 {
     public partial class MainPage : ContentPage
     {
-        public List<Post> Posts { get; set; }
-
         public MainPage()
         {
             InitializeComponent();
         }
 
-        protected override async void OnAppearing()
+        protected override void OnAppearing()
         {
             base.OnAppearing();
 
-            Posts = await App.dbContext.GetPostsAsync();
-            Posts_ListView.ItemsSource = Posts;
+            // USE IF VIEWMODEL DONT WORK
+            Posts_ListView.ItemsSource = Task.Run(async () => await App.dbContext.GetPostsAsync()).Result;
         }
 
         private async void AddNewPostBtn_Clicked(object sender, EventArgs e)
@@ -43,6 +41,12 @@ namespace InstagramApp
                     BindingContext = e.SelectedItem as Post,
                 });
             }
+        }
+
+        private async void AddDummyPost_Clicked(object sender, EventArgs e)
+        {
+            Post dummyPost = new Post() { Title = "Dummy Post", Date = DateTime.Now };
+            await App.dbContext.SavePostAsync(dummyPost);
         }
     }
 }

@@ -4,20 +4,31 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace InstagramApp.ViewModels
 {
-    public class PostsViewModel
+    public class PostsViewModel : INotifyPropertyChanged
     {
+        public  PostsViewModel()
+        {
+            //Posts = new List<Post>();
+
+            Posts = Task.Run(async () => await App.dbContext.GetPostsAsync()).Result;
+        }
+
+
+
         public event PropertyChangedEventHandler PropertyChanged;
-        void OnPropertyChanged(string name)
+        protected void OnPropertyChanged(string name)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
 
-        private ObservableCollection<Post> _posts;
-        public ObservableCollection<Post> Posts
+        //public List<Post> Posts { get; set; }
+        private List<Post> _posts;
+        public List<Post> Posts
         {
             get
             {
@@ -26,8 +37,11 @@ namespace InstagramApp.ViewModels
 
             set
             {
-                _posts = value;
-                OnPropertyChanged(nameof(Posts));
+                if (_posts != value)
+                {
+                    _posts = value;
+                    OnPropertyChanged(nameof(Posts));
+                }
             }
         }
     }
