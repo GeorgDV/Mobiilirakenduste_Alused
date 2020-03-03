@@ -7,9 +7,12 @@
             xmlns:local1="clr-namespace:MVVM"
             android:TabbedPage.ToolbarPlacement="Bottom">
   <!--Pages can be added as references or inline-->
-    <local:MainPage Title="Tip Calc." Icon="tip_icon.png"></local:MainPage>
+    <local:MainPage Title="Tip Calc." Icon="tip_icon.png">
+    </local:MainPage>
+
     <local1:SettingsPage Title="Settings" Icon="settings_icon.png">
     </local1:SettingsPage>
+
     <local1:LanguagePage Title="Language" Icon="language_icon.png">
     </local1:LanguagePage>
 </TabbedPage>

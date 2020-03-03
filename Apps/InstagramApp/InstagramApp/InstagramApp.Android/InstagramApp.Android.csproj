@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>
@@ -93,7 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\InstagramApp\InstagramApp.csproj">
-      <Project>{FDED6F29-E472-4B23-9A0F-0BB95FB9205D}</Project>
+      <Project>{BE97F1C4-87F8-468F-A34D-61848B1B7BD3}</Project>
       <Name>InstagramApp</Name>
     </ProjectReference>
   </ItemGroup>

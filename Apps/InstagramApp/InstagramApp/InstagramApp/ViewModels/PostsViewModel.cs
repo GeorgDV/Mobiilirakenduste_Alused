@@ -12,7 +12,7 @@ namespace InstagramApp.ViewModels
     {
         public  PostsViewModel()
         {
-            //Posts = new List<Post>();
+            Posts = new List<Post>();
 
             Posts = Task.Run(async () => await App.dbContext.GetPostsAsync()).Result;
         }

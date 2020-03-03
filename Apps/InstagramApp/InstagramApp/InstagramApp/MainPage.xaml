@@ -8,7 +8,7 @@
 
 
     <ContentPage.BindingContext>
-        <vm:PostsViewModel></vm:PostsViewModel>
+        <vm:PostsViewModel/>
     </ContentPage.BindingContext>
 
     <StackLayout WidthRequest="400">
@@ -27,7 +27,7 @@
                       ItemsSource="{Binding Posts}"
                       CachingStrategy="RecycleElement"
                       ItemSelected="Posts_ListView_ItemSelected"
-                      RowHeight="1200">
+                      RowHeight="800">
 
             <!--Built in Cells-->
             <!--
