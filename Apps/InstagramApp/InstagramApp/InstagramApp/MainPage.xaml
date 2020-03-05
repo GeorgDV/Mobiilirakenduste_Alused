@@ -20,12 +20,13 @@
 
         <Button x:Name="AddNewPostBtn" Text="Add Post" HorizontalOptions="Center" Clicked="AddNewPostBtn_Clicked"
                 BackgroundColor="DeepSkyBlue"></Button>
+        <!--
         <Button x:Name="AddDummyPost" Text="Add Dummy Post" HorizontalOptions="Center" Clicked="AddDummyPost_Clicked"
                 BackgroundColor="DeepSkyBlue"></Button>
+        -->
 
         <ListView x:Name="Posts_ListView"
                       ItemsSource="{Binding Posts}"
-                      CachingStrategy="RecycleElement"
                       ItemSelected="Posts_ListView_ItemSelected"
                       RowHeight="800">
 

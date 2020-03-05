@@ -43,6 +43,7 @@ namespace InstagramApp.ViewModels
                     OnPropertyChanged(nameof(Posts));
                 }
             }
+
         }
     }
 }

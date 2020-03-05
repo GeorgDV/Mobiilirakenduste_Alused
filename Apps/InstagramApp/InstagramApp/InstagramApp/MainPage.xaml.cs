@@ -19,13 +19,15 @@ namespace InstagramApp
             InitializeComponent();
         }
 
+
+        //USE IF VIEWMODEL NOT WORK
         protected override void OnAppearing()
         {
             base.OnAppearing();
-
-            // USE IF VIEWMODEL DONT WORK
             Posts_ListView.ItemsSource = Task.Run(async () => await App.dbContext.GetPostsAsync()).Result;
         }
+
+
 
         private async void AddNewPostBtn_Clicked(object sender, EventArgs e)
         {
@@ -46,10 +48,13 @@ namespace InstagramApp
             }
         }
 
+
+        /*
         private async void AddDummyPost_Clicked(object sender, EventArgs e)
         {
             Post dummyPost = new Post() { Title = "Dummy Post", Date = DateTime.Now };
             await App.dbContext.SavePostAsync(dummyPost);
         }
+        */
     }
 }
