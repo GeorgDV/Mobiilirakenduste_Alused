@@ -45,6 +45,7 @@ namespace InstagramApp
                 string formattedPath = currentPath.Substring(6);
                 post.ImgPath = formattedPath;
                 post.Date = DateTime.Now;
+
                 await App.dbContext.SavePostAsync(post);
                 await Navigation.PopAsync();
             }

@@ -12,9 +12,13 @@ namespace InstagramApp.ViewModels
     {
         public  PostsViewModel()
         {
-            Posts = new List<Post>();
+            Posts = new ObservableCollection<Post>();
+            List<Post> postList = Task.Run(async () => await App.dbContext.GetPostsAsync()).Result;
 
-            Posts = Task.Run(async () => await App.dbContext.GetPostsAsync()).Result;
+            foreach (Post post in postList)
+            {
+                Posts.Add(post);
+            }
         }
 
 
@@ -26,9 +30,9 @@ namespace InstagramApp.ViewModels
         }
 
 
-        //public List<Post> Posts { get; set; }
-        private List<Post> _posts;
-        public List<Post> Posts
+        //public ObservableCollection<Post> Posts { get; set; }
+        private ObservableCollection<Post> _posts;
+        public ObservableCollection<Post> Posts
         {
             get
             {
