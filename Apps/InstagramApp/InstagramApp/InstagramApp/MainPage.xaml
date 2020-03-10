@@ -6,10 +6,14 @@
              x:Class="InstagramApp.MainPage"
              BackgroundColor="Aqua">
 
-
     <ContentPage.BindingContext>
         <vm:PostsViewModel/>
     </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding AddPostCommand}" Icon="plus_icon.png"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
 
     <StackLayout WidthRequest="400">
         <!-- Place new controls here -->
@@ -18,17 +22,10 @@
            VerticalOptions="CenterAndExpand"
            FontSize="32" FontAttributes="Bold" TextColor="Black"/>
 
-        <Button x:Name="AddNewPostBtn" Text="Add Post" HorizontalOptions="Center" Clicked="AddNewPostBtn_Clicked"
-                BackgroundColor="DeepSkyBlue"></Button>
-        <!--
-        <Button x:Name="AddDummyPost" Text="Add Dummy Post" HorizontalOptions="Center" Clicked="AddDummyPost_Clicked"
-                BackgroundColor="DeepSkyBlue"></Button>
-        -->
-
         <ListView x:Name="Posts_ListView"
                       ItemsSource="{Binding Posts}"
                       ItemSelected="Posts_ListView_ItemSelected"
-                      RowHeight="800">
+                      HasUnevenRows="True">
 
             <!--Built in Cells-->
             <!--

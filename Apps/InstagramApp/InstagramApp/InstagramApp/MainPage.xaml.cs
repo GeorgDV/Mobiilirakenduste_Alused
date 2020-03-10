@@ -1,16 +1,12 @@
-﻿using InstagramApp.Models;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using System.ComponentModel;
+using InstagramApp.Models;
+using InstagramApp.ViewModels;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace InstagramApp
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+    [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
 
@@ -20,15 +16,16 @@ namespace InstagramApp
         }
 
 
-        //USE IF VIEWMODEL NOT WORK
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            Posts_ListView.ItemsSource = Task.Run(async () => await App.dbContext.GetPostsAsync()).Result;
+            //USE IF VIEWMODEL NOT WORK
+            //Posts_ListView.ItemsSource = Task.Run(async () => await App.dbContext.GetPostsAsync()).Result;
+            (this.BindingContext as PostsViewModel)?.RefreshList();
         }
 
 
-
+        /*
         private async void AddNewPostBtn_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddPostPage
@@ -36,6 +33,7 @@ namespace InstagramApp
                 BindingContext = new Post()
             });
         }
+        */       
 
         private async void Posts_ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
@@ -47,14 +45,5 @@ namespace InstagramApp
                 });
             }
         }
-
-
-        /*
-        private async void AddDummyPost_Clicked(object sender, EventArgs e)
-        {
-            Post dummyPost = new Post() { Title = "Dummy Post", Date = DateTime.Now };
-            await App.dbContext.SavePostAsync(dummyPost);
-        }
-        */
     }
 }

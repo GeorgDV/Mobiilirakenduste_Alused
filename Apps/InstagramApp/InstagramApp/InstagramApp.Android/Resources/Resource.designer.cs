@@ -2994,10 +2994,13 @@ namespace InstagramApp.Droid
 			public const int notify_panel_notification_icon_bg = 2131165490;
 			
 			// aapt resource value: 0x7F070133
-			public const int tooltip_frame_dark = 2131165491;
+			public const int plus_icon = 2131165491;
 			
 			// aapt resource value: 0x7F070134
-			public const int tooltip_frame_light = 2131165492;
+			public const int tooltip_frame_dark = 2131165492;
+			
+			// aapt resource value: 0x7F070135
+			public const int tooltip_frame_light = 2131165493;
 			
 			static Drawable()
 			{
