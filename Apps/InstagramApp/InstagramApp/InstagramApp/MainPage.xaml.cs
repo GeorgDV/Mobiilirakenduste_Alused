@@ -25,7 +25,7 @@ namespace InstagramApp
         }
 
 
-        /*
+
         private async void AddNewPostBtn_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddPostPage
@@ -33,7 +33,7 @@ namespace InstagramApp
                 BindingContext = new Post()
             });
         }
-        */       
+               
 
         private async void Posts_ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {

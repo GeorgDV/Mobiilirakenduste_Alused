@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:InstagramApp"
+             xmlns:models="clr-namespace:InstagramApp.Models"
              xmlns:vm="clr-namespace:InstagramApp.ViewModels"
              x:Class="InstagramApp.MainPage"
              BackgroundColor="Aqua">
@@ -11,7 +12,7 @@
     </ContentPage.BindingContext>
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Command="{Binding AddPostCommand}" Icon="plus_icon.png"></ToolbarItem>
+        <ToolbarItem Clicked="AddNewPostBtn_Clicked" Icon="plus_icon.png"></ToolbarItem>
     </ContentPage.ToolbarItems>
 
 

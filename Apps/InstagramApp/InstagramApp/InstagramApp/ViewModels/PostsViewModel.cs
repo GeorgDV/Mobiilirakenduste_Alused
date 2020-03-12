@@ -12,13 +12,17 @@ namespace InstagramApp.ViewModels
 {
     public class PostsViewModel : INotifyPropertyChanged
     {
-        public INavigation Navigation { get; set; }
-
-        public PostsViewModel(INavigation navigation)
+        public PostsViewModel()
         {
-            this.Navigation = navigation;
+            //this.Navigation = navigation;
             Posts = new ObservableCollection<Post>();
-            AddPostCommand = new Command(OnAddPostCommand);
+            //AddPostCommand = new Command(OnAddPostCommand);
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string name)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
 
@@ -53,6 +57,9 @@ namespace InstagramApp.ViewModels
             }
         }
 
+        /*
+        public INavigation Navigation { get; set; }
+
         public ICommand AddPostCommand { get; private set; }
 
         private async void OnAddPostCommand()
@@ -62,14 +69,9 @@ namespace InstagramApp.ViewModels
                 BindingContext = new Post()
             });
         }
+        */
 
 
 
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged(string name)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
     }
 }
