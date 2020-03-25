@@ -13,5 +13,7 @@ namespace InstagramApp.Models
         public string Title { get; set; }
         public string ImgPath { get; set; }
         public DateTime Date { get; set; }
+        public string UserPhotoPath { get; set; }
+        public string UserName { get; set; }
     }
 }

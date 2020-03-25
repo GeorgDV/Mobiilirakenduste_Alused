@@ -29,12 +29,22 @@ namespace InstagramApp
 
         private async void SaveProfileBtn_Clicked(object sender, EventArgs e)
         {
+            ErrorOutput.Text = "";
             var user = (User)BindingContext;
             string currentPath = ProfilePhoto.Source.ToString();
             string formattedPath = currentPath.Substring(6);
-            user.ProfilePhotoPath = formattedPath;
-            await App.userDbContext.SaveUserAsync(user);
-            await Navigation.PopAsync();
+            if (UserNameEntry.Text != "")
+            {
+                UserName.Text = UserNameEntry.Text.ToString();
+                UserNameEntry.Text = String.Empty;
+                user.ProfilePhotoPath = formattedPath;
+                user.UserName = UserNameEntry.Text.ToString();
+                await App.userDbContext.SaveUserAsync(user);
+            }
+            else
+            {
+                ErrorOutput.Text = "Username can't be empty!";
+            }
         }
 
         private async void DeleteBtn_Clicked(object sender, EventArgs e)

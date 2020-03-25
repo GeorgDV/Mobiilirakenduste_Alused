@@ -40,11 +40,14 @@ namespace InstagramApp
             else
             {
                 var post = (Post)BindingContext;
+                //var user = (User)BindingContext;
                 post.Title = PostTitleEntry.Text;
                 string currentPath = PhotoImage.Source.ToString();
                 string formattedPath = currentPath.Substring(6);
                 post.ImgPath = formattedPath;
                 post.Date = DateTime.Now;
+                //post.UserPhotoPath = user.ProfilePhotoPath;
+                //post.UserName = user.UserName;
 
                 await App.dbContext.SavePostAsync(post);
                 await Navigation.PopAsync();

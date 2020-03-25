@@ -30,7 +30,7 @@ namespace InstagramApp
         {
             await Navigation.PushAsync(new AddPostPage
             {
-                BindingContext = new Post()
+                BindingContext =  new Post()
             });
         }
                
