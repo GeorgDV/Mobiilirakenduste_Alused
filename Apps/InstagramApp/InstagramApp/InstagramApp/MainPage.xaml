@@ -2,8 +2,19 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:InstagramApp"
+             xmlns:models="clr-namespace:InstagramApp.Models"
+             xmlns:vm="clr-namespace:InstagramApp.ViewModels"
              x:Class="InstagramApp.MainPage"
              BackgroundColor="Aqua">
+
+    <ContentPage.BindingContext>
+        <vm:PostsViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="AddNewPostBtn_Clicked" Icon="plus_icon.png"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
 
     <StackLayout WidthRequest="400">
         <!-- Place new controls here -->
@@ -12,14 +23,14 @@
            VerticalOptions="CenterAndExpand"
            FontSize="32" FontAttributes="Bold" TextColor="Black"/>
 
-        <Button x:Name="AddNewPostBtn" Text="Add Post" HorizontalOptions="Center" Clicked="AddNewPostBtn_Clicked"
-                BackgroundColor="DeepSkyBlue"></Button>
-
         <ListView x:Name="Posts_ListView"
                       ItemsSource="{Binding Posts}"
-                      CachingStrategy="RecycleElement"
                       ItemSelected="Posts_ListView_ItemSelected"
+<<<<<<< HEAD
                       RowHeight="550">
+=======
+                      HasUnevenRows="True">
+>>>>>>> 38068c2136aefc43d3c44d73e68c3ef93e8807e8
 
             <!--Built in Cells-->
             <!--

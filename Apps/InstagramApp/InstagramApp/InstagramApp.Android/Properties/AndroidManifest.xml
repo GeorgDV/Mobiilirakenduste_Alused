@@ -2,14 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.InstagramApp" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="20" android:targetSdkVersion="27" />
 	<uses-permission android:name="android.permission.CAMERA" />
-	<application android:label="InstagramApp.Android">
-    <provider android:name="android.support.v4.content.FileProvider"
-              android:authorities="${applicationId}.fileprovider"
-              android:exported="false"
-              android:grantUriPermissions="true">
-
-      <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
-                       android:resource="@xml/file_paths"></meta-data>
-    </provider>
-  </application>
+	<application android:label="InstagramApp.Android" android:icon="@drawable/camera_logo">
+		<provider android:name="android.support.v4.content.FileProvider" android:authorities="${applicationId}.fileprovider" android:exported="false" android:grantUriPermissions="true">
+			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"></meta-data>
+		</provider>
+	</application>
 </manifest>

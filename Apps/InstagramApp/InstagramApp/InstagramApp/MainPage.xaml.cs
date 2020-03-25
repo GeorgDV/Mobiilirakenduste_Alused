@@ -1,30 +1,30 @@
-﻿using InstagramApp.Models;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using System.ComponentModel;
+using InstagramApp.Models;
+using InstagramApp.ViewModels;
 using Xamarin.Forms;
 
 namespace InstagramApp
 {
+    [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        public List<Post> Posts { get; set; }
 
         public MainPage()
         {
             InitializeComponent();
         }
 
-        protected override async void OnAppearing()
+
+        protected override void OnAppearing()
         {
             base.OnAppearing();
-
-            Posts = await App.dbContext.GetPostsAsync();
-            Posts_ListView.ItemsSource = Posts;
+            //USE IF VIEWMODEL NOT WORK
+            //Posts_ListView.ItemsSource = Task.Run(async () => await App.dbContext.GetPostsAsync()).Result;
+            (this.BindingContext as PostsViewModel)?.RefreshList();
         }
+
+
 
         private async void AddNewPostBtn_Clicked(object sender, EventArgs e)
         {
@@ -33,6 +33,7 @@ namespace InstagramApp
                 BindingContext = new Post()
             });
         }
+               
 
         private async void Posts_ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
