@@ -19,7 +19,7 @@
                       ItemsSource="{Binding Posts}"
                       CachingStrategy="RecycleElement"
                       ItemSelected="Posts_ListView_ItemSelected"
-                      RowHeight="800">
+                      RowHeight="550">
 
             <!--Built in Cells-->
             <!--

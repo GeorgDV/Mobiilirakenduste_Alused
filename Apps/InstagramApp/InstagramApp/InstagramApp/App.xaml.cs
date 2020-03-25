@@ -1,4 +1,5 @@
 ﻿using CrossPlatformApp.Data;
+using InstagramApp.Data;
 using InstagramApp.Models;
 using System;
 using System.IO;
@@ -23,12 +24,25 @@ namespace InstagramApp
             }
         }
 
+        static UserDatabase _userDbContext;
+        public static UserDatabase userDbContext
+        {
+            get
+            {
+                if (_userDbContext == null)
+                {
+                    _userDbContext = new UserDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Users.db3"));
+                }
+                return _userDbContext;
+            }
+        }
+
         public App()
         {
             InitializeComponent();
 
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new LogInPage());
         }
 
         protected override void OnStart()
