@@ -7,6 +7,6 @@
              x:Class="InstagramApp.MainTabbedPage"
              xmlns:local1="clr-namespace:InstagramApp">
   <!--Pages can be added as references or inline-->
-  <local1:MainPage Title="Posts" />
-  <local1:UserDetailsPage Title="User" />
+  <local1:MainPage Icon="camera_logo.png" />
+  <local1:UserDetailsPage Icon="user_logo.png" />
 </TabbedPage>

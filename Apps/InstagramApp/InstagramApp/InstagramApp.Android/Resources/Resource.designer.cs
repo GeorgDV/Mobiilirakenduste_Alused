@@ -15,7 +15,7 @@ namespace InstagramApp.Droid
 {
 	
 	
-	[System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
 	public partial class Resource
 	{
 		
@@ -3004,6 +3004,9 @@ namespace InstagramApp.Droid
 			
 			// aapt resource value: 0x7F070136
 			public const int tooltip_frame_light = 2131165494;
+			
+			// aapt resource value: 0x7F070137
+			public const int user_logo = 2131165495;
 			
 			static Drawable()
 			{

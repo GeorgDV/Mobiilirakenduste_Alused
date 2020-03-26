@@ -14,7 +14,7 @@ namespace InstagramApp
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class AddPostPage : ContentPage
 	{
-		public AddPostPage ()
+		public AddPostPage()
 		{
 			InitializeComponent ();
 		}
@@ -39,15 +39,17 @@ namespace InstagramApp
             }
             else
             {
-                var post = (Post)BindingContext;
-                //var user = (User)BindingContext;
+
+                //var post = (Post)BindingContext;
+                var post = new Post();
+                var user = (User)BindingContext;
                 post.Title = PostTitleEntry.Text;
                 string currentPath = PhotoImage.Source.ToString();
                 string formattedPath = currentPath.Substring(6);
                 post.ImgPath = formattedPath;
                 post.Date = DateTime.Now;
-                //post.UserPhotoPath = user.ProfilePhotoPath;
-                //post.UserName = user.UserName;
+                post.UserPhotoPath = user.ProfilePhotoPath;
+                post.UserName = user.UserName;
 
                 await App.dbContext.SavePostAsync(post);
                 await Navigation.PopAsync();

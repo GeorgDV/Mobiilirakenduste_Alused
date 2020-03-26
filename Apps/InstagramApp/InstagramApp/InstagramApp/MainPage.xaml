@@ -12,7 +12,7 @@
     </ContentPage.BindingContext>
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Clicked="AddNewPostBtn_Clicked" Icon="plus_icon.png"></ToolbarItem>
+        <ToolbarItem Text="Post" Clicked="AddNewPostBtn_Clicked" Icon="plus_icon.png"></ToolbarItem>
     </ContentPage.ToolbarItems>
 
 
@@ -43,13 +43,17 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Margin="10">
-                            <Grid HeightRequest="50">
+                            <Grid HeightRequest="75" VerticalOptions="Center" HorizontalOptions="Center">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="50"></ColumnDefinition>
-                                    <ColumnDefinition Width="450"></ColumnDefinition>
+                                    <ColumnDefinition ></ColumnDefinition>
+                                    <ColumnDefinition ></ColumnDefinition>
+                                    <ColumnDefinition ></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <Image Grid.Column="0" Source="{Binding UserPhotoPath}" BackgroundColor="WhiteSmoke"></Image>
-                                <Label Grid.Column="1" Text="{Binding UserName}"></Label>
+                                <Image Grid.Column="0" Source="{Binding UserPhotoPath}" WidthRequest="75" HeightRequest="75"
+                                       VerticalOptions="Center" HorizontalOptions="Center" 
+                                       BackgroundColor="WhiteSmoke"></Image>
+                                <Label Grid.Column="1" Text="{Binding UserName}" FontSize="Large" FontAttributes="Bold" VerticalTextAlignment="Center"></Label>
+                                <Label Grid.Column="2" Text="Posted:" FontSize="Large" VerticalTextAlignment="Center"></Label>
                             </Grid>
                             <Label Text="{Binding Title}" 
                                Style="{DynamicResource ListItemTextStyle}"

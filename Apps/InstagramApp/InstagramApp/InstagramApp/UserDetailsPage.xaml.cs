@@ -31,19 +31,19 @@ namespace InstagramApp
         {
             ErrorOutput.Text = "";
             var user = (User)BindingContext;
-            string currentPath = ProfilePhoto.Source.ToString();
-            string formattedPath = currentPath.Substring(6);
-            if (UserNameEntry.Text != "")
+            if (UserNameEntry.Text != "" && ProfilePhoto.Source != null)
             {
-                UserName.Text = UserNameEntry.Text.ToString();
-                UserNameEntry.Text = String.Empty;
-                user.ProfilePhotoPath = formattedPath;
+                string currentPath = ProfilePhoto.Source.ToString();
+                string formattedPath = currentPath.Substring(6);
                 user.UserName = UserNameEntry.Text.ToString();
+                user.ProfilePhotoPath = formattedPath;
+                UserName.Text = UserNameEntry.Text.ToString();
+
                 await App.userDbContext.SaveUserAsync(user);
             }
             else
             {
-                ErrorOutput.Text = "Username can't be empty!";
+                ErrorOutput.Text = "Username/Profile Photo can't be empty!";
             }
         }
 

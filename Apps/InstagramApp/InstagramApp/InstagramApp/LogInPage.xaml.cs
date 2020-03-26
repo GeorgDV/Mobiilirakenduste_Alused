@@ -23,6 +23,7 @@ namespace InstagramApp
             OutputLabel.Text = "";
             string username = UserNameEntry.Text;
             string password = PasswordEntry.Text;
+
             if ((username == "" && password == "") || (username == "" || password == ""))
             {
                 OutputLabel.Text = "Username and/or Password field cannot be empty!";

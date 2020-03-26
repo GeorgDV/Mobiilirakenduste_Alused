@@ -28,9 +28,11 @@ namespace InstagramApp
 
         private async void AddNewPostBtn_Clicked(object sender, EventArgs e)
         {
+            var user = base.Parent.BindingContext;
+
             await Navigation.PushAsync(new AddPostPage
             {
-                BindingContext =  new Post()
+                BindingContext =  user
             });
         }
                
