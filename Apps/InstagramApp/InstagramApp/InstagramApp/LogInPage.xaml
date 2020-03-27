@@ -31,7 +31,7 @@
                      HorizontalOptions="Center"
                      Padding="25">
             <!-- Place new controls here -->
-            <Label Text="InstagramApp" FontAttributes="Bold" FontSize="48" HorizontalOptions="Center" />
+            <Label Text="InstagramApp" FontAttributes="Bold" FontSize="40" HorizontalOptions="Center" />
             <Label Text="Please Login or Sign Up" FontSize="Large"/>
 
             <Label x:Name="OutputLabel" Text="" FontSize="Small"/>
