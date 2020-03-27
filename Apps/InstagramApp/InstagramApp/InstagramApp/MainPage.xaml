@@ -43,17 +43,15 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Margin="10">
-                            <Grid HeightRequest="75" VerticalOptions="Center" HorizontalOptions="Center">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition ></ColumnDefinition>
-                                    <ColumnDefinition ></ColumnDefinition>
-                                    <ColumnDefinition ></ColumnDefinition>
+                            <Grid HeightRequest="75">
+                                <Grid.ColumnDefinitions VerticalOptions="Center" HorizontalOptions="Start" >
+                                    <ColumnDefinition Width="75" ></ColumnDefinition>
+                                    <ColumnDefinition Width="*" ></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <Image Grid.Column="0" Source="{Binding UserPhotoPath}" WidthRequest="75" HeightRequest="75"
-                                       VerticalOptions="Center" HorizontalOptions="Center" 
+                                <Image Grid.Column="0" Source="{Binding UserPhotoPath}" WidthRequest="75" HeightRequest="75" 
                                        BackgroundColor="WhiteSmoke"></Image>
-                                <Label Grid.Column="1" Text="{Binding UserName}" FontSize="Large" FontAttributes="Bold" VerticalTextAlignment="Center"></Label>
-                                <Label Grid.Column="2" Text="Posted:" FontSize="Large" VerticalTextAlignment="Center"></Label>
+                                <Label Grid.Column="1" Text="{Binding UserName}" FontSize="Large" FontAttributes="Bold"
+                                       VerticalOptions="Center"></Label>
                             </Grid>
                             <Label Text="{Binding Title}" 
                                Style="{DynamicResource ListItemTextStyle}"

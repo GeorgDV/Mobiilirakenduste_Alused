@@ -27,11 +27,12 @@
 
 
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center"
-                     VerticalOptions="Center"
+        <StackLayout VerticalOptions="Center"
+                     HorizontalOptions="Center"
                      Padding="25">
             <!-- Place new controls here -->
-            <Label Text="Login" FontSize="Large"/>
+            <Label Text="InstagramApp" FontAttributes="Bold" FontSize="48" HorizontalOptions="Center" />
+            <Label Text="Please Login or Sign Up" FontSize="Large"/>
 
             <Label x:Name="OutputLabel" Text="" FontSize="Small"/>
 
