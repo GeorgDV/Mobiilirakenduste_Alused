@@ -18,12 +18,13 @@ namespace InstagramApp
             {
                 if (_dbContext == null)
                 {
-                    _dbContext = new ApplicationDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Posts.db3"));
+                    _dbContext = new ApplicationDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "database.db3"));
                 }
                 return _dbContext;
             }
         }
 
+        /*
         static UserDatabase _userDbContext;
         public static UserDatabase userDbContext
         {
@@ -36,6 +37,7 @@ namespace InstagramApp
                 return _userDbContext;
             }
         }
+        */
 
         public App()
         {

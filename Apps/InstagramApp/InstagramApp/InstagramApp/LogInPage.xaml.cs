@@ -30,7 +30,7 @@ namespace InstagramApp
             }
             else if (UserExists(username, password))
             {
-                var user = App.userDbContext.GetUserByNameAndPassword(username, password).Result;
+                var user = App.dbContext.GetUserByNameAndPassword(username, password).Result;
                 OutputLabel.Text = "";
                 UserNameEntry.Text = "";
                 PasswordEntry.Text = "";
@@ -63,7 +63,7 @@ namespace InstagramApp
             else if ((!UserExists(newUsername, newPassword)) && (newUsername != "" && newPassword != ""))
             {
                 var newUser = new User() { UserName = newUsername, Password = newPassword };
-                await App.userDbContext.SaveUserAsync(newUser);
+                await App.dbContext.SaveUserAsync(newUser);
                 OutputLabel.Text = "User successfully registered!";
                 UserNameEntry.Text = "";
                 PasswordEntry.Text = "";
@@ -80,7 +80,7 @@ namespace InstagramApp
 
         private bool UserExists(string username, string password)
         {
-            var GetUser = App.userDbContext.GetUserByNameAndPassword(username, password);
+            var GetUser = App.dbContext.GetUserByNameAndPassword(username, password);
             var user = GetUser.Result;
 
             if (user == null)
