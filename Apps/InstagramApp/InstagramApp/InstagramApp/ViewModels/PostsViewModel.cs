@@ -49,7 +49,7 @@ namespace InstagramApp.ViewModels
         public void RefreshList()
         {
             Posts.Clear();
-            List<Post> postList = Task.Run(async () => await App.dbContext.GetPostsAsync()).Result;
+            List<Post> postList = Task.Run(async () => await App.dbContext.Posts_GetPostsAsync()).Result;
 
             foreach (Post post in postList)
             {

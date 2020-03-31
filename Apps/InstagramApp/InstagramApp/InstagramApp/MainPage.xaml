@@ -25,7 +25,6 @@
 
         <ListView x:Name="Posts_ListView"
                       ItemsSource="{Binding Posts}"
-                      ItemSelected="Posts_ListView_ItemSelected"
                       HasUnevenRows="True">
 
             <!--Built in Cells-->
@@ -48,8 +47,14 @@
                                     <ColumnDefinition Width="75" ></ColumnDefinition>
                                     <ColumnDefinition Width="*" ></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <Image Grid.Column="0" Source="{Binding UserPhotoPath}" WidthRequest="75" HeightRequest="75" 
-                                       BackgroundColor="WhiteSmoke"></Image>
+                                <Frame Grid.Column="0"
+                                       CornerRadius="40" 
+                                       HeightRequest="80"
+                                       WidthRequest="80"
+                                       Padding="0"
+                                       IsClippedToBounds="True">
+                                    <Image  Source="{Binding UserPhotoPath}" BackgroundColor="WhiteSmoke"></Image>
+                                </Frame>
                                 <Label Grid.Column="1" Text="{Binding UserName}" FontSize="Large" FontAttributes="Bold"
                                        VerticalOptions="Center"></Label>
                             </Grid>

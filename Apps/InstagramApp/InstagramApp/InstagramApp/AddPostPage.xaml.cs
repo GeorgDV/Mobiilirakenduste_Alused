@@ -51,7 +51,7 @@ namespace InstagramApp
                 post.UserPhotoPath = user.ProfilePhotoPath;
                 post.UserName = user.UserName;
 
-                await App.dbContext.SavePostAsync(post);
+                await App.dbContext.Posts_SavePostAsync(post);
                 await Navigation.PopAsync();
             }
 

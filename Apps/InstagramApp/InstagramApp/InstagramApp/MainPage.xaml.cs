@@ -36,7 +36,7 @@ namespace InstagramApp
             });
         }
                
-
+        /*
         private async void Posts_ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             if (e.SelectedItem != null)
@@ -47,5 +47,6 @@ namespace InstagramApp
                 });
             }
         }
+        */
     }
 }

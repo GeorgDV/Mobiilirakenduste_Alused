@@ -21,19 +21,19 @@ namespace CrossPlatformApp.Data
 
 
         //POSTS TABLE METHODS
-        public async Task<List<Post>> GetPostsAsync()
+        public async Task<List<Post>> Posts_GetPostsAsync()
         {
             return await _dbContext.Table<Post>().ToListAsync();
         }
 
-        public async Task<Post> GetPostAsync(int id)
+        public async Task<Post> Posts_GetPostAsync(int id)
         {
             return await _dbContext.Table<Post>()
                            .Where(x => x.Id == id)
                            .FirstOrDefaultAsync();
         }
 
-        public async Task<int> SavePostAsync(Post Post)
+        public async Task<int> Posts_SavePostAsync(Post Post)
         {
             if (Post.Id != 0)
             {
@@ -45,7 +45,7 @@ namespace CrossPlatformApp.Data
             }
         }
 
-        public async Task<int> DeletePostAsync(Post Post)
+        public async Task<int> Posts_DeletePostAsync(Post Post)
         {
             return await _dbContext.DeleteAsync(Post);
         }
@@ -53,26 +53,26 @@ namespace CrossPlatformApp.Data
 
 
         //USERS TABLE METHODS
-        public async Task<List<User>> GetUsersAsync()
+        public async Task<List<User>> Users_GetUsersAsync()
         {
             return await _dbContext.Table<User>().ToListAsync();
         }
 
-        public async Task<User> GetUserByIdAsync(int id)
+        public async Task<User> Users_GetUserByIdAsync(int id)
         {
             return await _dbContext.Table<User>()
                            .Where(x => x.UserId == id)
                            .FirstOrDefaultAsync();
         }
 
-        public Task<User> GetUserByNameAndPassword(string username, string password)
+        public Task<User> Users_GetUserByNameAndPassword(string username, string password)
         {
             return _dbContext.Table<User>()
                            .Where(x => x.UserName.Equals(username) && x.Password.Equals(password))
                            .FirstOrDefaultAsync();
         }
 
-        public async Task<int> SaveUserAsync(User User)
+        public async Task<int> Users_SaveUserAsync(User User)
         {
             if (User.UserId != 0)
             {
@@ -84,7 +84,7 @@ namespace CrossPlatformApp.Data
             }
         }
 
-        public async Task<int> DeleteUserAsync(User User)
+        public async Task<int> Users_DeleteUserAsync(User User)
         {
             return await _dbContext.DeleteAsync(User);
         }

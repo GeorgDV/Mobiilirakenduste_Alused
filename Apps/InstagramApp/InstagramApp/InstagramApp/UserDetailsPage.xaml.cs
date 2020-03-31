@@ -39,7 +39,7 @@ namespace InstagramApp
                 user.ProfilePhotoPath = formattedPath;
                 UserName.Text = UserNameEntry.Text.ToString();
 
-                await App.dbContext.SaveUserAsync(user);
+                await App.dbContext.Users_SaveUserAsync(user);
             }
             else
             {
@@ -50,7 +50,7 @@ namespace InstagramApp
         private async void DeleteBtn_Clicked(object sender, EventArgs e)
         {
             var user = (User)BindingContext;
-            await App.dbContext.DeleteUserAsync(user);
+            await App.dbContext.Users_DeleteUserAsync(user);
             await Navigation.PopAsync();
         }
     }

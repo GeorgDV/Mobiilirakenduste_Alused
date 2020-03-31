@@ -24,20 +24,6 @@ namespace InstagramApp
             }
         }
 
-        /*
-        static UserDatabase _userDbContext;
-        public static UserDatabase userDbContext
-        {
-            get
-            {
-                if (_userDbContext == null)
-                {
-                    _userDbContext = new UserDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Users.db3"));
-                }
-                return _userDbContext;
-            }
-        }
-        */
 
         public App()
         {

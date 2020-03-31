@@ -21,7 +21,7 @@ namespace InstagramApp
         private async void DeletePostBtn_Clicked(object sender, EventArgs e)
         {
             var post = (Post)BindingContext;
-            await App.dbContext.DeletePostAsync(post);
+            await App.dbContext.Posts_DeletePostAsync(post);
             await Navigation.PopAsync();
         }
     }
