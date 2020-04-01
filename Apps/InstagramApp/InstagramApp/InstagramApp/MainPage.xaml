@@ -25,7 +25,8 @@
 
         <ListView x:Name="Posts_ListView"
                       ItemsSource="{Binding Posts}"
-                      HasUnevenRows="True">
+                      HasUnevenRows="True"
+                      SelectionMode="None">
 
             <!--Built in Cells-->
             <!--
@@ -58,7 +59,7 @@
                                 <Label Grid.Column="1" Text="{Binding UserName}" FontSize="Large" FontAttributes="Bold"
                                        VerticalOptions="Center"></Label>
                             </Grid>
-                            <Label Text="{Binding Title}" 
+                            <Label x:Name="PostTitle" Text="{Binding Title}" 
                                Style="{DynamicResource ListItemTextStyle}"
                                HorizontalOptions="Center"
                                FontSize="26" FontAttributes="Bold"/>
@@ -68,6 +69,24 @@
                                FontSize="16"/>
                             <Image Source="{Binding ImgPath}"
                                    HorizontalOptions="CenterAndExpand"></Image>
+
+
+                            <Grid HeightRequest="75" HorizontalOptions="Center">
+                                <Grid.ColumnDefinitions VerticalOptions="Center" HorizontalOptions="Center" >
+                                    <ColumnDefinition Width="*" ></ColumnDefinition>
+                                    <ColumnDefinition Width="*" ></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding LikeCount}" FontSize="Large" BackgroundColor="DeepSkyBlue" 
+                                       FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center"></Label>
+                                <Label Grid.Column="1" Text="empty label" FontSize="Large" BackgroundColor="DeepSkyBlue"
+                                       FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center"></Label>
+                            </Grid>
+
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="TapGestureRecognizer_DoubleTapped"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                            
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

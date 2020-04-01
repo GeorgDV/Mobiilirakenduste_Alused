@@ -21,6 +21,7 @@ namespace InstagramApp.Models
 
         // LIKE/COMMENT INFO
         public int LikeCount { get; set; }
-        //public string[] Comments { get; set; }
+
+       // public List<Comment> Comments
     }
 }

@@ -36,17 +36,32 @@ namespace InstagramApp
             });
         }
                
-        /*
-        private async void Posts_ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            if (e.SelectedItem != null)
+            var stackLayout = sender as StackLayout;
+            var post = stackLayout.BindingContext as Post;
+
+            if (post == null)
             {
-                await Navigation.PushAsync(new PostDetailsPage
-                {
-                    BindingContext = e.SelectedItem as Post,
-                });
+                return;
             }
+
+            await Navigation.PushAsync(new PostDetailsPage
+            {
+                BindingContext = post,
+            });
+            
         }
-        */
+
+        private async void TapGestureRecognizer_DoubleTapped(object sender, EventArgs e)
+        {
+            var stackLayout = sender as StackLayout;
+            var post = stackLayout.BindingContext as Post;
+
+            post.LikeCount++;
+
+            await App.dbContext.Posts_SavePostAsync(post);
+            (this.BindingContext as PostsViewModel)?.RefreshList();
+        }
     }
 }
