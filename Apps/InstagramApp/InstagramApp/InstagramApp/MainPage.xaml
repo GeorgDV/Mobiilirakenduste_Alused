@@ -16,7 +16,7 @@
     </ContentPage.ToolbarItems>
 
 
-    <StackLayout WidthRequest="400">
+    <StackLayout>
         <!-- Place new controls here -->
         <Label Text="InstagramApp" 
            HorizontalOptions="Center"
@@ -43,9 +43,9 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Margin="10">
-                            <Grid HeightRequest="75">
+                            <Grid HeightRequest="80">
                                 <Grid.ColumnDefinitions VerticalOptions="Center" HorizontalOptions="Start" >
-                                    <ColumnDefinition Width="75" ></ColumnDefinition>
+                                    <ColumnDefinition Width="80" ></ColumnDefinition>
                                     <ColumnDefinition Width="*" ></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
                                 <Frame Grid.Column="0"
@@ -68,25 +68,69 @@
                                HorizontalOptions="Center"
                                FontSize="16"/>
                             <Image Source="{Binding ImgPath}"
-                                   HorizontalOptions="CenterAndExpand"></Image>
+                                   HorizontalOptions="CenterAndExpand">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="PostImage_Tapped"></TapGestureRecognizer>
+                                    <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="PostImage_DoubleTapped"></TapGestureRecognizer>
+                                </Image.GestureRecognizers>
+                            </Image>
 
 
-                            <Grid HeightRequest="75" HorizontalOptions="Center">
-                                <Grid.ColumnDefinitions VerticalOptions="Center" HorizontalOptions="Center" >
+                            <Grid HeightRequest="50" HorizontalOptions="Center">
+                                <Grid.ColumnDefinitions VerticalOptions="Center">
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
                                     <ColumnDefinition Width="*" ></ColumnDefinition>
                                     <ColumnDefinition Width="*" ></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <Label Grid.Column="0" Text="{Binding LikeCount}" FontSize="Large" BackgroundColor="DeepSkyBlue" 
+                                <Frame Grid.Column="0"
+                                       CornerRadius="25" 
+                                       HeightRequest="50"
+                                       WidthRequest="50"
+                                       Padding="0"
+                                       IsClippedToBounds="True">
+                                    <ImageButton x:Name="LikePost_Button" Source="like_icon.png" Clicked="LikePost_Button_Clicked" BackgroundColor="DeepSkyBlue"></ImageButton>
+                                </Frame>
+                                <Label Grid.Column="1" Text="{Binding LikeCount}" TextColor="Black" FontSize="Large" BackgroundColor="LightSkyBlue" 
                                        FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center"></Label>
-                                <Label Grid.Column="1" Text="empty label" FontSize="Large" BackgroundColor="DeepSkyBlue"
+                                <Label Grid.Column="2" Text="" TextColor="Black" FontSize="Large" BackgroundColor="LightSkyBlue"
                                        FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center"></Label>
                             </Grid>
 
-                            <StackLayout.GestureRecognizers>
-                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
-                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="TapGestureRecognizer_DoubleTapped"></TapGestureRecognizer>
-                            </StackLayout.GestureRecognizers>
-                            
+                            <ListView x:Name="Comments_ListView"
+                                      ItemsSource="{Binding Posts}"
+                                      HeightRequest="100"
+                                      WidthRequest="400"
+                                      RowHeight="50"
+                                      SelectionMode="None"
+                                      BackgroundColor="WhiteSmoke">
+
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <StackLayout>
+                                                <Grid HeightRequest="50" HorizontalOptions="Center">
+                                                    <Grid.ColumnDefinitions VerticalOptions="Center">
+                                                        <ColumnDefinition Width="50"></ColumnDefinition>
+                                                        <ColumnDefinition Width="100" ></ColumnDefinition>
+                                                        <ColumnDefinition Width="*" ></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Frame Grid.Column="0"
+                                                           CornerRadius="25" 
+                                                           HeightRequest="50"
+                                                           WidthRequest="50"
+                                                           Padding="0"
+                                                           IsClippedToBounds="True">
+                                                        <Image  Source="{Binding UserPhotoPath}" BackgroundColor="WhiteSmoke"></Image>
+                                                    </Frame>
+                                                    <Label Grid.Column="1" Text="{Binding Date}" TextColor="Black" FontSize="Medium"></Label>
+                                                    <Label Grid.Column="2" Text="{Binding UserName}" TextColor="Black" FontSize="Medium"></Label>
+                                                </Grid>
+                                            </StackLayout>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                                
+                            </ListView>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

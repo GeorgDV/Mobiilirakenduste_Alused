@@ -1,4 +1,5 @@
 ﻿using SQLite;
+using SQLiteNetExtensions.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -21,7 +22,8 @@ namespace InstagramApp.Models
 
         // LIKE/COMMENT INFO
         public int LikeCount { get; set; }
-
-       // public List<Comment> Comments
+        [TextBlob("CommentsBlobbed")]
+        public List<Comment> Comments { get; set; }
+        public string CommentsBlobbed { get; set; }
     }
 }

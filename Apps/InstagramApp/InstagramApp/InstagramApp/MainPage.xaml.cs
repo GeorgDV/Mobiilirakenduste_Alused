@@ -36,10 +36,10 @@ namespace InstagramApp
             });
         }
                
-        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        private async void PostImage_Tapped(object sender, EventArgs e)
         {
-            var stackLayout = sender as StackLayout;
-            var post = stackLayout.BindingContext as Post;
+            var image = sender as Image;
+            var post = image.BindingContext as Post;
 
             if (post == null)
             {
@@ -53,10 +53,21 @@ namespace InstagramApp
             
         }
 
-        private async void TapGestureRecognizer_DoubleTapped(object sender, EventArgs e)
+        private async void PostImage_DoubleTapped(object sender, EventArgs e)
         {
-            var stackLayout = sender as StackLayout;
-            var post = stackLayout.BindingContext as Post;
+            var image = sender as Image;
+            var post = image.BindingContext as Post;
+
+            post.LikeCount++;
+
+            await App.dbContext.Posts_SavePostAsync(post);
+            (this.BindingContext as PostsViewModel)?.RefreshList();
+        }
+
+        private async void LikePost_Button_Clicked(object sender, EventArgs e)
+        {
+            var button = sender as ImageButton;
+            var post = button.BindingContext as Post;
 
             post.LikeCount++;
 

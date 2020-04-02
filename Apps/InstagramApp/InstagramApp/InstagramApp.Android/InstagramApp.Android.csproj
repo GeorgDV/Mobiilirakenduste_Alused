@@ -119,7 +119,9 @@
       </Generator>
     </AndroidResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\like_icon.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\InstagramApp\InstagramApp.csproj">
       <Project>{BE97F1C4-87F8-468F-A34D-61848B1B7BD3}</Project>
