@@ -28,7 +28,7 @@ namespace InstagramApp
 
         private async void AddNewPostBtn_Clicked(object sender, EventArgs e)
         {
-            var user = base.Parent.BindingContext;
+            var user = base.Parent.BindingContext as User;
 
             await Navigation.PushAsync(new AddPostPage
             {
@@ -55,10 +55,20 @@ namespace InstagramApp
 
         private async void PostImage_DoubleTapped(object sender, EventArgs e)
         {
+            var user = base.Parent.BindingContext as User;
             var image = sender as Image;
             var post = image.BindingContext as Post;
 
-            post.LikeCount++;
+            if (post.HasBeenLikedByUser == false)
+            {
+                post.LikeCount++;
+                post.HasBeenLikedByUser = true;
+            }
+            else
+            {
+                post.LikeCount--;
+                post.HasBeenLikedByUser = false;
+            }
 
             await App.dbContext.Posts_SavePostAsync(post);
             (this.BindingContext as PostsViewModel)?.RefreshList();
@@ -66,13 +76,35 @@ namespace InstagramApp
 
         private async void LikePost_Button_Clicked(object sender, EventArgs e)
         {
+            var user = base.Parent.BindingContext as User;
             var button = sender as ImageButton;
             var post = button.BindingContext as Post;
 
-            post.LikeCount++;
+            if (post.HasBeenLikedByUser == false)
+            {
+                post.LikeCount++;
+                post.HasBeenLikedByUser = true;
+            }
+            else
+            {
+                post.LikeCount--;
+                post.HasBeenLikedByUser = false;
+            }
 
             await App.dbContext.Posts_SavePostAsync(post);
             (this.BindingContext as PostsViewModel)?.RefreshList();
+        }
+
+        private async void CommentPost_Button_Clicked(object sender, EventArgs e)
+        {
+            //var user = base.Parent.BindingContext;
+            var button = sender as ImageButton;
+            var post = button.BindingContext;
+
+            await Navigation.PushAsync(new AddCommentPage
+            {
+                BindingContext = post
+            });
         }
     }
 }

@@ -19,11 +19,14 @@ namespace InstagramApp.Models
         // USER INFO
         public string UserPhotoPath { get; set; }
         public string UserName { get; set; }
+        public bool HasBeenLikedByUser { get; set; }
 
-        // LIKE/COMMENT INFO
+        // LIKE INFO
         public int LikeCount { get; set; }
+        /*
         [TextBlob("CommentsBlobbed")]
-        public List<Comment> Comments { get; set; }
+        public List<string> Comments { get; set; }
         public string CommentsBlobbed { get; set; }
+        */
     }
 }

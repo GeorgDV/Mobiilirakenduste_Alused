@@ -15,7 +15,6 @@ namespace InstagramApp.ViewModels
         public PostsViewModel()
         {
             Posts = new ObservableCollection<Post>();
-            Comments = new ObservableCollection<Comment>();
             //AddPostCommand = new Command(OnAddPostCommand);
         }
 
@@ -55,46 +54,8 @@ namespace InstagramApp.ViewModels
             foreach (Post post in postList)
             {
                 Posts.Add(post);
-                List<Comment> commentList = post.Comments;
-                if (commentList != null)
-                {
-                    foreach (Comment comment in commentList)
-                    {
-                        Comments.Add(comment);
-                    }
-                }
             }
-
-            var dummyComment = new Comment
-            {
-                Content = "Test Content",
-                UserPhotoPath = "",
-                Date = DateTime.Now
-            };
-
-            Comments.Add(dummyComment);
         }
-
-        //public ObservableCollection<Post> Posts { get; set; }
-        private ObservableCollection<Comment> _comments;
-        public ObservableCollection<Comment> Comments
-        {
-            get
-            {
-                return _comments;
-            }
-
-            set
-            {
-                if (_comments != value)
-                {
-                    _comments = value;
-                    OnPropertyChanged(nameof(Comments));
-                }
-            }
-
-        }
-
 
         /*
         public INavigation Navigation { get; set; }
@@ -109,8 +70,5 @@ namespace InstagramApp.ViewModels
             });
         }
         */
-
-
-
     }
 }

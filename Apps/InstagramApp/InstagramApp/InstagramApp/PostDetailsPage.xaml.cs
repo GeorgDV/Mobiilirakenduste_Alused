@@ -1,4 +1,5 @@
 ﻿using InstagramApp.Models;
+using InstagramApp.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,14 @@ namespace InstagramApp
         {
             InitializeComponent();
         }
+
+        /*
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            (this.BindingContext as CommentsViewModel)?.RefreshList();
+        }
+        */
 
         private async void DeletePostBtn_Clicked(object sender, EventArgs e)
         {

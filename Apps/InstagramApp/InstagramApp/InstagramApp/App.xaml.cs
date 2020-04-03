@@ -1,5 +1,4 @@
-﻿using CrossPlatformApp.Data;
-using InstagramApp.Data;
+﻿using InstagramApp.Data;
 using InstagramApp.Models;
 using System;
 using System.IO;

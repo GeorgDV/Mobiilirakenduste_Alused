@@ -11,6 +11,7 @@ namespace InstagramApp.Models
         public int UserId { get; set; }
 
         public string ProfilePhotoPath { get; set; }
+        public string UserBio { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
     }
