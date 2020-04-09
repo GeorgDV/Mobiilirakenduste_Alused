@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using InstagramApp.Models;
 using InstagramApp.ViewModels;
+using SQLite;
+using SQLiteNetExtensions.Extensions;
 using Xamarin.Forms;
 
 namespace InstagramApp
@@ -9,7 +13,6 @@ namespace InstagramApp
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-
         public MainPage()
         {
             InitializeComponent();
@@ -59,15 +62,14 @@ namespace InstagramApp
             var image = sender as Image;
             var post = image.BindingContext as Post;
 
-            if (post.HasBeenLikedByUser == false)
+
+            if (!post.LikedUsers.Contains(user))
             {
                 post.LikeCount++;
-                post.HasBeenLikedByUser = true;
             }
-            else
+            else if (post.LikedUsers.Contains(user))
             {
                 post.LikeCount--;
-                post.HasBeenLikedByUser = false;
             }
 
             await App.dbContext.Posts_SavePostAsync(post);
@@ -80,15 +82,18 @@ namespace InstagramApp
             var button = sender as ImageButton;
             var post = button.BindingContext as Post;
 
-            if (post.HasBeenLikedByUser == false)
+            //SOME STUFF THAT MAY HELP
+            var conn = new SQLiteConnection(App.dbContext.GetDatabasePath());
+            WriteOperations.UpdateWithChildren(conn, post);
+            var list = ReadOperations.GetAllWithChildren<Post>(conn);
+
+            if (!post.LikedUsers.Contains(user))
             {
                 post.LikeCount++;
-                post.HasBeenLikedByUser = true;
             }
-            else
+            else if (post.LikedUsers.Contains(user))
             {
                 post.LikeCount--;
-                post.HasBeenLikedByUser = false;
             }
 
             await App.dbContext.Posts_SavePostAsync(post);

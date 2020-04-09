@@ -50,7 +50,6 @@ namespace InstagramApp
                 post.Date = DateTime.Now;
                 post.UserPhotoPath = user.ProfilePhotoPath;
                 post.UserName = user.UserName;
-                post.HasBeenLikedByUser = false;
 
                 await App.dbContext.Posts_SavePostAsync(post);
                 await Navigation.PopAsync();

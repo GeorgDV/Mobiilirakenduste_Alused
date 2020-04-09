@@ -1,5 +1,6 @@
 ﻿using InstagramApp.Models;
 using SQLite;
+using SQLiteNetExtensions.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -17,8 +18,7 @@ namespace InstagramApp.Data
             _dbContext = new SQLiteAsyncConnection(dbPath);
             _dbContext.CreateTableAsync<Post>().Wait();
             _dbContext.CreateTableAsync<User>().Wait();
-            _dbContext.CreateTableAsync<Comment>().Wait();
-
+            _dbContext.CreateTableAsync<Comment>().Wait();;
         }
 
 
@@ -131,5 +131,10 @@ namespace InstagramApp.Data
             return await _dbContext.DeleteAsync(Comment);
         }
 
+
+        public string GetDatabasePath()
+        {
+            return _dbContext.DatabasePath;
+        }
     }
 }
