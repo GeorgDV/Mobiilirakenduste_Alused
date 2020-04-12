@@ -60,19 +60,32 @@ namespace InstagramApp
         {
             var user = base.Parent.BindingContext as User;
             var image = sender as Image;
-            var post = image.BindingContext as Post;
+            var bindingPost = image.BindingContext as Post;
+            var conn = new SQLiteConnection(App.dbContext.GetDatabasePath());
 
-
-            if (!post.LikedUsers.Contains(user))
+            var postList = conn.GetAllWithChildren<Post>();
+            var selectedPost = postList.Find(x => x.Id == bindingPost.Id);
+            if (selectedPost.LikedUsers == null)
             {
-                post.LikeCount++;
-            }
-            else if (post.LikedUsers.Contains(user))
-            {
-                post.LikeCount--;
+                selectedPost.LikedUsers = new List<User>();
             }
 
-            await App.dbContext.Posts_SavePostAsync(post);
+            var likedUser = selectedPost.LikedUsers.Find(x => x.UserId == user.UserId);
+
+
+            if (likedUser == null)
+            {
+                selectedPost.LikeCount++;
+                selectedPost.LikedUsers.Add(user);
+            }
+            else
+            {
+                selectedPost.LikeCount--;
+                selectedPost.LikedUsers.Remove(likedUser);
+            }
+
+            conn.UpdateWithChildren(selectedPost);
+            await App.dbContext.Posts_SavePostAsync(selectedPost);
             (this.BindingContext as PostsViewModel)?.RefreshList();
         }
 
@@ -80,23 +93,32 @@ namespace InstagramApp
         {
             var user = base.Parent.BindingContext as User;
             var button = sender as ImageButton;
-            var post = button.BindingContext as Post;
-
-            //SOME STUFF THAT MAY HELP
+            var bindingPost = button.BindingContext as Post;
             var conn = new SQLiteConnection(App.dbContext.GetDatabasePath());
-            WriteOperations.UpdateWithChildren(conn, post);
-            var list = ReadOperations.GetAllWithChildren<Post>(conn);
 
-            if (!post.LikedUsers.Contains(user))
+            var postList = conn.GetAllWithChildren<Post>();
+            var selectedPost = postList.Find(x => x.Id == bindingPost.Id);
+            if (selectedPost.LikedUsers == null)
             {
-                post.LikeCount++;
-            }
-            else if (post.LikedUsers.Contains(user))
-            {
-                post.LikeCount--;
+                selectedPost.LikedUsers = new List<User>();
             }
 
-            await App.dbContext.Posts_SavePostAsync(post);
+            var likedUser = selectedPost.LikedUsers.Find(x => x.UserId == user.UserId);
+
+
+            if (likedUser == null)
+            {
+                selectedPost.LikeCount++;
+                selectedPost.LikedUsers.Add(user);
+            }
+            else
+            {
+                selectedPost.LikeCount--;
+                selectedPost.LikedUsers.Remove(likedUser);
+            }
+
+            conn.UpdateWithChildren(selectedPost);
+            await App.dbContext.Posts_SavePostAsync(selectedPost);
             (this.BindingContext as PostsViewModel)?.RefreshList();
         }
 
