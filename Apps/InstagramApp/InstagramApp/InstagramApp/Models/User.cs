@@ -8,7 +8,7 @@ namespace InstagramApp.Models
     public class User
     {
         [PrimaryKey, AutoIncrement]
-        public int UserId { get; set; }
+        public int Id { get; set; }
 
         public string ProfilePhotoPath { get; set; }
         public string UserBio { get; set; }

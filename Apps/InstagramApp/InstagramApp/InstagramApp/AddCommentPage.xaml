@@ -8,7 +8,7 @@
              BackgroundColor="Aqua">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="StartAndExpand">
-            <Label Text="Add Comment (currently just adds to db)" 
+            <Label Text="Add Comment (adds comment to selected post)" 
                    HorizontalOptions="Center"
                    VerticalOptions="StartAndExpand"
                    FontSize="32" FontAttributes="Bold" TextColor="Black"/>

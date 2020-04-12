@@ -70,7 +70,7 @@ namespace InstagramApp
                 selectedPost.LikedUsers = new List<User>();
             }
 
-            var likedUser = selectedPost.LikedUsers.Find(x => x.UserId == user.UserId);
+            var likedUser = selectedPost.LikedUsers.Find(x => x.Id == user.Id);
 
 
             if (likedUser == null)
@@ -103,7 +103,7 @@ namespace InstagramApp
                 selectedPost.LikedUsers = new List<User>();
             }
 
-            var likedUser = selectedPost.LikedUsers.Find(x => x.UserId == user.UserId);
+            var likedUser = selectedPost.LikedUsers.Find(x => x.Id == user.Id);
 
 
             if (likedUser == null)
@@ -124,9 +124,10 @@ namespace InstagramApp
 
         private async void CommentPost_Button_Clicked(object sender, EventArgs e)
         {
-            //var user = base.Parent.BindingContext;
+            var user = base.Parent.BindingContext;
             var button = sender as ImageButton;
             var post = button.BindingContext;
+            
 
             await Navigation.PushAsync(new AddCommentPage
             {

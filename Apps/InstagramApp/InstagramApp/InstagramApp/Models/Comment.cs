@@ -9,7 +9,7 @@ namespace InstagramApp.Models
     {
         //POST INFO
         [PrimaryKey, AutoIncrement]
-        public int CommentId { get; set; }
+        public int Id { get; set; }
         public int PostId { get; set; }
 
         //USER INFO

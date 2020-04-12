@@ -1,4 +1,6 @@
 ﻿using InstagramApp.Models;
+using SQLite;
+using SQLiteNetExtensions.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,14 +31,24 @@ namespace InstagramApp
             else
             {
                 var comment = new Comment();
-                var post = (Post)BindingContext;
+                var bindingPost = (Post)BindingContext;
+                var conn = new SQLiteConnection(App.dbContext.GetDatabasePath());
 
-                comment.PostId = post.Id;
-                comment.UserName = post.UserName;
-                comment.UserPhotoPath = post.UserPhotoPath;
+                var postList = conn.GetAllWithChildren<Post>();
+                var selectedPost = postList.Find(x => x.Id == bindingPost.Id);
+                if (selectedPost.Comments == null)
+                {
+                    selectedPost.Comments = new List<Comment>();
+                }
+
+                comment.PostId = bindingPost.Id;
+                comment.UserName = "TestUserName";
+                //comment.UserPhotoPath = "";
                 comment.Content = CommentContentEntry.Text.ToString();
                 comment.Date = DateTime.Now;
+                selectedPost.Comments.Add(comment);
 
+                conn.UpdateWithChildren(selectedPost);
                 await App.dbContext.Comments_SaveCommentAsync(comment);
                 await Navigation.PopAsync();
             }
