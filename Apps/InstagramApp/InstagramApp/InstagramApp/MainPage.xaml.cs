@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using InstagramApp.Models;
 using InstagramApp.ViewModels;
+using SQLite;
+using SQLiteNetExtensions.Extensions;
 using Xamarin.Forms;
 
 namespace InstagramApp
@@ -9,7 +13,6 @@ namespace InstagramApp
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-
         public MainPage()
         {
             InitializeComponent();
@@ -57,20 +60,32 @@ namespace InstagramApp
         {
             var user = base.Parent.BindingContext as User;
             var image = sender as Image;
-            var post = image.BindingContext as Post;
+            var bindingPost = image.BindingContext as Post;
+            var conn = new SQLiteConnection(App.dbContext.GetDatabasePath());
 
-            if (post.HasBeenLikedByUser == false)
+            var postList = conn.GetAllWithChildren<Post>();
+            var selectedPost = postList.Find(x => x.Id == bindingPost.Id);
+            if (selectedPost.LikedUsers == null)
             {
-                post.LikeCount++;
-                post.HasBeenLikedByUser = true;
+                selectedPost.LikedUsers = new List<User>();
+            }
+
+            var likedUser = selectedPost.LikedUsers.Find(x => x.UserId == user.UserId);
+
+
+            if (likedUser == null)
+            {
+                selectedPost.LikeCount++;
+                selectedPost.LikedUsers.Add(user);
             }
             else
             {
-                post.LikeCount--;
-                post.HasBeenLikedByUser = false;
+                selectedPost.LikeCount--;
+                selectedPost.LikedUsers.Remove(likedUser);
             }
 
-            await App.dbContext.Posts_SavePostAsync(post);
+            conn.UpdateWithChildren(selectedPost);
+            await App.dbContext.Posts_SavePostAsync(selectedPost);
             (this.BindingContext as PostsViewModel)?.RefreshList();
         }
 
@@ -78,20 +93,32 @@ namespace InstagramApp
         {
             var user = base.Parent.BindingContext as User;
             var button = sender as ImageButton;
-            var post = button.BindingContext as Post;
+            var bindingPost = button.BindingContext as Post;
+            var conn = new SQLiteConnection(App.dbContext.GetDatabasePath());
 
-            if (post.HasBeenLikedByUser == false)
+            var postList = conn.GetAllWithChildren<Post>();
+            var selectedPost = postList.Find(x => x.Id == bindingPost.Id);
+            if (selectedPost.LikedUsers == null)
             {
-                post.LikeCount++;
-                post.HasBeenLikedByUser = true;
+                selectedPost.LikedUsers = new List<User>();
+            }
+
+            var likedUser = selectedPost.LikedUsers.Find(x => x.UserId == user.UserId);
+
+
+            if (likedUser == null)
+            {
+                selectedPost.LikeCount++;
+                selectedPost.LikedUsers.Add(user);
             }
             else
             {
-                post.LikeCount--;
-                post.HasBeenLikedByUser = false;
+                selectedPost.LikeCount--;
+                selectedPost.LikedUsers.Remove(likedUser);
             }
 
-            await App.dbContext.Posts_SavePostAsync(post);
+            conn.UpdateWithChildren(selectedPost);
+            await App.dbContext.Posts_SavePostAsync(selectedPost);
             (this.BindingContext as PostsViewModel)?.RefreshList();
         }
 
