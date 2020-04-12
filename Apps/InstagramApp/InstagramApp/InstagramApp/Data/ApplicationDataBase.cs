@@ -63,7 +63,7 @@ namespace InstagramApp.Data
         public async Task<User> Users_GetUserByIdAsync(int id)
         {
             return await _dbContext.Table<User>()
-                           .Where(x => x.UserId == id)
+                           .Where(x => x.Id == id)
                            .FirstOrDefaultAsync();
         }
 
@@ -76,7 +76,7 @@ namespace InstagramApp.Data
 
         public async Task<int> Users_SaveUserAsync(User User)
         {
-            if (User.UserId != 0)
+            if (User.Id != 0)
             {
                 return await _dbContext.UpdateAsync(User);
             }
@@ -102,7 +102,7 @@ namespace InstagramApp.Data
         public async Task<Comment> Comments_GetCommentByCommentIdAsync(int id)
         {
             return await _dbContext.Table<Comment>()
-                           .Where(x => x.CommentId == id)
+                           .Where(x => x.Id == id)
                            .FirstOrDefaultAsync();
         }
 
@@ -116,7 +116,7 @@ namespace InstagramApp.Data
 
         public async Task<int> Comments_SaveCommentAsync(Comment Comment)
         {
-            if (Comment.CommentId != 0)
+            if (Comment.Id != 0)
             {
                 return await _dbContext.UpdateAsync(Comment);
             }
